@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Clock, Landmark, Navigation, MessageSquare, Contact } from 'lucide-react';
+import { MapPin, Phone, Clock, Landmark, Navigation, MessageSquare } from 'lucide-react';
 
 const InstagramIcon = (props) => (
   <svg 
@@ -18,21 +18,6 @@ const InstagramIcon = (props) => (
 );
 
 export default function AboutContact() {
-  const downloadVCard = () => {
-    const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:Patna Printing Works
-TEL;TYPE=WORK,VOICE:09472249802
-ADR;TYPE=WORK:;;Bari Path, beside Card Mahal, near Patna Collegiate School, Dariyapur Gola;Patna;Bihar;800004;India
-URL:https://patna-printing-works.web.app
-END:VCARD`;
-    const blob = new Blob([vcard], { type: 'text/vcard' });
-    const url = URL.createObjectURL(blob);
-    const newLink = document.createElement('a');
-    newLink.download = 'Patna_Printing_Works.vcf';
-    newLink.href = url;
-    newLink.click();
-  };
   const contactDetails = [
     {
       icon: MapPin,
@@ -176,13 +161,13 @@ END:VCARD`;
                 ></iframe>
               </div>
 
-              {/* Action Buttons: WhatsApp, Instagram, Save Contact Card */}
-              <div className="grid grid-cols-3 gap-3 mt-4 pt-2">
+              {/* Action Buttons: WhatsApp and Instagram */}
+              <div className="grid grid-cols-2 gap-4 mt-4 pt-2">
                 <a 
                   href="https://wa.me/919472249802?text=Hello%20Patna%20Printing%20Works!%20I%20would%20like%20to%20inquire%20about%20printing%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="retro-btn bg-[#25D366] text-[#FAF7F2] text-[10px] sm:text-xs py-3 px-1 flex items-center justify-center gap-1.5 shadow-retro-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1E1E1E]"
+                  className="retro-btn bg-[#25D366] text-[#FAF7F2] text-xs py-3 px-1 flex items-center justify-center gap-1.5 shadow-retro-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1E1E1E]"
                 >
                   <MessageSquare className="w-4 h-4 text-[#FAF7F2]" />
                   <span className="hidden sm:inline">WhatsApp Chat</span>
@@ -193,21 +178,12 @@ END:VCARD`;
                   href="https://www.instagram.com/patna_printing_works/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="retro-btn bg-[#E1306C] text-[#FAF7F2] text-[10px] sm:text-xs py-3 px-1 flex items-center justify-center gap-1.5 shadow-retro-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1E1E1E]"
+                  className="retro-btn bg-[#E1306C] text-[#FAF7F2] text-xs py-3 px-1 flex items-center justify-center gap-1.5 shadow-retro-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1E1E1E]"
                 >
                   <InstagramIcon className="w-4 h-4 text-[#FAF7F2]" />
-                  <span className="hidden sm:inline">Instagram</span>
+                  <span className="hidden sm:inline">Instagram Profile</span>
                   <span className="sm:hidden">Instagram</span>
                 </a>
-                
-                <button 
-                  onClick={downloadVCard}
-                  className="retro-btn bg-retro-mustard text-retro-charcoal text-[10px] sm:text-xs py-3 px-1 flex items-center justify-center gap-1.5 shadow-retro-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1E1E1E]"
-                >
-                  <Contact className="w-4 h-4 text-retro-charcoal" />
-                  <span className="hidden sm:inline">Save Contact Card</span>
-                  <span className="sm:hidden">Save Card</span>
-                </button>
               </div>
             </div>
           </div>
