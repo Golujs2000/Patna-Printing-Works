@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUp, Printer, Phone, MapPin, Heart, MessageCircle } from 'lucide-react';
+import { businessDetails, services } from '../data/siteData';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -20,10 +21,10 @@ export default function Footer() {
             </div>
             <div className="text-left">
               <h3 className="font-syne font-black text-lg tracking-wider text-retro-cream uppercase leading-none">
-                Patna Printing Works
+                {businessDetails.name}
               </h3>
               <span className="font-mono text-[10px] text-retro-mustard uppercase tracking-widest block mt-1">
-                BARI PATH, PATNA • SINCE 2024
+                BARI PATH, PATNA • SINCE {businessDetails.est}
               </span>
             </div>
           </div>
@@ -46,12 +47,9 @@ export default function Footer() {
               PRINT SERVICES
             </h4>
             <ul className="font-sans text-sm space-y-2 text-retro-cream/80">
-              <li>• Wedding Cards Printing</li>
-              <li>• Outdoor Flex Banners</li>
-              <li>• Marketing Flyers & Handbills</li>
-              <li>• Premium Visiting & Business Cards</li>
-              <li>• Custom Stickers & Labels</li>
-              <li>• Digital & Offset Catalogues</li>
+              {services.map((service) => (
+                <li key={service.id}>• {service.title}</li>
+              ))}
             </ul>
           </div>
 
@@ -63,18 +61,18 @@ export default function Footer() {
             <div className="font-sans text-sm space-y-3 text-retro-cream/80">
               <div className="flex gap-2.5">
                 <MapPin className="w-4 h-4 text-retro-mustard shrink-0 mt-0.5" />
-                <span className="leading-tight">Bari Path, beside Card Mahal, near Patna Collegiate School, Dariyapur, Patna, Bihar</span>
+                <span className="leading-tight">{businessDetails.addressShort}</span>
               </div>
               <div className="flex gap-2.5">
                 <Phone className="w-4 h-4 text-retro-mustard shrink-0 mt-0.5" />
-                <a href="tel:+919472249802" className="hover:text-retro-mustard transition-all hover:underline">
-                  094722 49802
+                <a href={`tel:${businessDetails.phoneDial}`} className="hover:text-retro-mustard transition-all hover:underline">
+                  {businessDetails.phone}
                 </a>
               </div>
               <div className="flex gap-2.5">
                 <MessageCircle className="w-4 h-4 text-retro-mustard shrink-0 mt-0.5" />
                 <a 
-                  href="https://wa.me/919472249802?text=Hello%20Patna%20Printing%20Works!%20I%20would%20like%20to%20inquire%20about%20printing%20services." 
+                  href={businessDetails.whatsappLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-retro-mustard transition-all hover:underline"
@@ -91,10 +89,10 @@ export default function Footer() {
               OUR MISSION
             </h4>
             <p className="font-sans text-xs text-retro-cream/70 leading-relaxed mb-4">
-              We aim to provide local shops, businesses, event coordinators, and families in Patna with high-speed digital printing & heavy-duty offset services at affordable wholesale prices. 
+              {businessDetails.mission}
             </p>
             <div className="font-mono text-[9px] text-retro-mustard uppercase bg-white/5 p-3 border border-white/10">
-              ★ NO MIDDLEMEN • DIRECT FROM FACTORY PRICING ★
+              {businessDetails.factoryPricingTagline}
             </div>
           </div>
 

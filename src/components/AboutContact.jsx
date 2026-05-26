@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Landmark, Navigation, MessageSquare } from 'lucide-react';
+import { businessDetails } from '../data/siteData';
 
 const InstagramIcon = (props) => (
   <svg 
@@ -18,28 +19,6 @@ const InstagramIcon = (props) => (
 );
 
 export default function AboutContact() {
-  const contactDetails = [
-    {
-      icon: MapPin,
-      title: 'Our Location',
-      info: 'Bari Path, beside Card Mahal, near Patna Collegiate School, Dariyapur Gola, Dujra Diara, Patna, Bihar 800004',
-      actionLabel: 'Get Directions',
-      actionUrl: 'https://maps.google.com/?q=Patna+Printing+Works+Bari+Path+Patna'
-    },
-    {
-      icon: Phone,
-      title: 'Call or WhatsApp',
-      info: '094722 49802 / +91 94722 49802',
-      actionLabel: 'Call Now',
-      actionUrl: 'tel:+919472249802'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      info: 'Monday - Saturday: 08:00 AM - 09:00 PM \nSunday: Closed',
-      actionLabel: 'Check Status: Open'
-    }
-  ];
 
   return (
     <section id="contact" className="relative w-full py-16 md:py-24 border-b-3 border-retro-charcoal bg-retro-card">
@@ -79,10 +58,10 @@ export default function AboutContact() {
                   <div>
                     <h4 className="font-grotesk font-black text-sm text-retro-charcoal uppercase tracking-wider">Address</h4>
                     <p className="font-sans text-sm text-retro-charcoal/80 mt-1 leading-relaxed">
-                      Bari Path, beside Card Mahal, near Patna Collegiate School, Dariyapur Gola, Dujra Diara, Patna, Bihar 800004
+                      {businessDetails.address}
                     </p>
                     <a 
-                      href="https://maps.google.com/?q=Patna+Printing+Works+Bari+Path+Patna" 
+                      href={businessDetails.googleMapsUrl} 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="inline-flex items-center gap-1.5 font-grotesk font-bold text-xs text-retro-terracotta hover:underline mt-2"
@@ -101,7 +80,7 @@ export default function AboutContact() {
                   <div>
                     <h4 className="font-grotesk font-black text-sm text-retro-charcoal uppercase tracking-wider">Contact Number</h4>
                     <p className="font-sans text-sm text-retro-charcoal/80 mt-1">
-                      <strong>Phone:</strong> 094722 49802 / +91 94722 49802
+                      <strong>Phone:</strong> {businessDetails.phone} / {businessDetails.phoneAlt}
                     </p>
                     <span className="text-xs font-mono text-retro-charcoal/50 block mt-1">Call for quotes, orders, and inquiries.</span>
                   </div>
@@ -115,10 +94,10 @@ export default function AboutContact() {
                   <div>
                     <h4 className="font-grotesk font-black text-sm text-retro-charcoal uppercase tracking-wider">Operating Hours</h4>
                     <p className="font-sans text-sm text-retro-charcoal/80 mt-1">
-                      Monday – Saturday: 08:00 AM – 09:00 PM
+                      {businessDetails.hoursLines.weekdays}
                     </p>
                     <p className="font-sans text-sm text-retro-terracotta mt-0.5 font-bold">
-                      Sunday: Closed
+                      {businessDetails.hoursLines.sunday}
                     </p>
                   </div>
                 </div>
@@ -131,7 +110,7 @@ export default function AboutContact() {
                   <div>
                     <h4 className="font-grotesk font-black text-sm text-retro-charcoal uppercase tracking-wider">Landmarks</h4>
                     <p className="font-sans text-xs text-retro-charcoal/80 mt-1 leading-relaxed">
-                      📍 Directly **beside Card Mahal**, and just a short walk from **Patna Collegiate School**. Located inside the vibrant printing market hub of Dariyapur Gola on Bari Path.
+                      {businessDetails.landmarks}
                     </p>
                   </div>
                 </div>
@@ -153,7 +132,7 @@ export default function AboutContact() {
               <div className="flex-1 w-full relative retro-border-sm overflow-hidden min-h-[300px]">
                 <iframe 
                   title="Patna Printing Works Google Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.4833767476553!2d85.15670329999999!3d25.615354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed590029addc37%3A0x9c5e79421008b9d9!2sPatna%20Printing%20Works!5e1!3m2!1sen!2sin!4v1779645238466!5m2!1sen!2sin"
+                  src={businessDetails.googleMapsEmbedUrl}
                   className="absolute inset-0 w-full h-full border-0 filter contrast-125 saturate-50"
                   allowFullScreen="" 
                   loading="lazy" 
@@ -164,7 +143,7 @@ export default function AboutContact() {
               {/* Action Buttons: WhatsApp and Instagram */}
               <div className="grid grid-cols-2 gap-4 mt-4 pt-2">
                 <a 
-                  href="https://wa.me/919472249802?text=Hello%20Patna%20Printing%20Works!%20I%20would%20like%20to%20inquire%20about%20printing%20services."
+                  href={businessDetails.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="retro-btn bg-[#25D366] text-[#FAF7F2] text-xs py-3 px-1 flex items-center justify-center gap-1.5 shadow-retro-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1E1E1E]"
@@ -175,7 +154,7 @@ export default function AboutContact() {
                 </a>
                 
                 <a 
-                  href="https://www.instagram.com/patna_printing_works/"
+                  href={businessDetails.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="retro-btn bg-[#E1306C] text-[#FAF7F2] text-xs py-3 px-1 flex items-center justify-center gap-1.5 shadow-retro-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1E1E1E]"

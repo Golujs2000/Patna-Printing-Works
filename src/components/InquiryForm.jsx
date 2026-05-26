@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Send, FileCheck, HelpCircle } from 'lucide-react';
+import { servicesListSimple, businessDetails } from '../data/siteData';
 
 export default function InquiryForm({ prefilledService, prefilledDetails }) {
   const [formData, setFormData] = useState({
@@ -23,17 +24,7 @@ export default function InquiryForm({ prefilledService, prefilledDetails }) {
     }
   }, [prefilledService, prefilledDetails]);
 
-  const servicesList = [
-    'Wedding Card Printing',
-    'Flex Banner Printing',
-    'Rollup Standee',
-    'Handbill / Flyer Printing',
-    'Visiting Cards',
-    'Poster Printing',
-    'Stickers & Labels',
-    'Offset & Digital Booklets',
-    'Other Custom Prints'
-  ];
+  const servicesList = servicesListSimple;
 
   const validate = () => {
     const newErrors = {};
@@ -64,7 +55,7 @@ ${formData.specs.trim() ? `- *Specifications*: ${formData.specs.trim()}` : ''}
 
 Please verify the details and reply with a quote.`;
 
-    const whatsappUrl = `https://wa.me/919472249802?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${businessDetails.whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -73,7 +64,7 @@ Please verify the details and reply with a quote.`;
       <div className="absolute inset-0 dot-grid pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 md:px-8 relative z-10">
-        
+
         {/* Section Heading */}
         <div className="text-center mb-12">
           <span className="font-grotesk font-black text-sm tracking-widest text-[#FAF7F2] bg-retro-terracotta retro-border-sm px-3 py-1 shadow-retro-sm">
@@ -89,7 +80,7 @@ Please verify the details and reply with a quote.`;
 
         {/* Neo-brutalist Invoice-Style Form Card */}
         <div className="bg-retro-card retro-border p-6 md:p-10 retro-shadow-lg max-w-2xl mx-auto relative overflow-hidden">
-          
+
           {/* Header Banner inside card */}
           <div className="border-b-3 border-retro-charcoal pb-6 mb-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
@@ -113,9 +104,8 @@ Please verify the details and reply with a quote.`;
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="e.g. Raj Kumar"
-                className={`w-full bg-retro-cream retro-border-sm p-3 font-grotesk font-bold text-retro-charcoal focus:outline-none focus:bg-retro-cream transition-all placeholder-retro-charcoal/30 ${
-                  errors.name ? 'border-retro-terracotta bg-retro-peach/20' : ''
-                }`}
+                className={`w-full bg-retro-cream retro-border-sm p-3 font-grotesk font-bold text-retro-charcoal focus:outline-none focus:bg-retro-cream transition-all placeholder-retro-charcoal/30 ${errors.name ? 'border-retro-terracotta bg-retro-peach/20' : ''
+                  }`}
               />
               {errors.name && <p className="text-retro-terracotta font-grotesk text-xs font-bold mt-1">⚠️ {errors.name}</p>}
             </div>
@@ -133,9 +123,8 @@ Please verify the details and reply with a quote.`;
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="e.g. 9472249802"
-                  className={`w-full bg-retro-cream retro-border-sm p-3 font-grotesk font-bold text-retro-charcoal focus:outline-none focus:bg-retro-cream transition-all placeholder-retro-charcoal/30 ${
-                    errors.phone ? 'border-retro-terracotta bg-retro-peach/20' : ''
-                  }`}
+                  className={`w-full bg-retro-cream retro-border-sm p-3 font-grotesk font-bold text-retro-charcoal focus:outline-none focus:bg-retro-cream transition-all placeholder-retro-charcoal/30 ${errors.phone ? 'border-retro-terracotta bg-retro-peach/20' : ''
+                    }`}
                 />
                 {errors.phone && <p className="text-retro-terracotta font-grotesk text-xs font-bold mt-1">⚠️ {errors.phone}</p>}
               </div>
@@ -169,9 +158,8 @@ Please verify the details and reply with a quote.`;
                 value={formData.quantity}
                 onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
                 placeholder="e.g. 500 Cards, 2 Banners (10x4 ft), etc."
-                className={`w-full bg-retro-cream retro-border-sm p-3 font-grotesk font-bold text-retro-charcoal focus:outline-none focus:bg-retro-cream transition-all placeholder-retro-charcoal/30 ${
-                  errors.quantity ? 'border-retro-terracotta bg-retro-peach/20' : ''
-                }`}
+                className={`w-full bg-retro-cream retro-border-sm p-3 font-grotesk font-bold text-retro-charcoal focus:outline-none focus:bg-retro-cream transition-all placeholder-retro-charcoal/30 ${errors.quantity ? 'border-retro-terracotta bg-retro-peach/20' : ''
+                  }`}
               />
               {errors.quantity && <p className="text-retro-terracotta font-grotesk text-xs font-bold mt-1">⚠️ {errors.quantity}</p>}
             </div>

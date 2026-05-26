@@ -8,6 +8,7 @@ import Process from './components/Process';
 import InquiryForm from './components/InquiryForm';
 import AboutContact from './components/AboutContact';
 import Footer from './components/Footer';
+import { businessDetails } from './data/siteData';
 
 export default function App() {
   const [prefilledService, setPrefilledService] = useState('');
@@ -67,7 +68,7 @@ export default function App() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919472249802?text=Hello%20Patna%20Printing%20Works!%20I%20would%20like%20to%20inquire%20about%20printing%20services."
+        href={businessDetails.whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-[#FAF7F2] p-4 rounded-none border-3 border-retro-charcoal shadow-retro hover:translate-x-[-2.5px] hover:translate-y-[-2.5px] hover:shadow-retro-lg active:translate-x-[1px] active:translate-y-[1px] active:shadow-retro-sm transition-all flex items-center gap-2 font-grotesk font-black text-sm uppercase"

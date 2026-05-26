@@ -1,37 +1,8 @@
 import React from 'react';
-import { Settings, CheckSquare, MessageSquare, ClipboardCheck } from 'lucide-react';
+import { processSteps } from '../data/siteData';
 
 export default function Process() {
-  const steps = [
-    {
-      number: '01',
-      title: 'Choose & Estimate',
-      description: 'Select your printing service and use the calculator to get a price estimate.',
-      icon: Settings,
-      bgColor: 'bg-retro-peach',
-    },
-    {
-      number: '02',
-      title: 'WhatsApp Consult',
-      description: 'Submit your requirements. We discuss custom paper types, GSM weight, and design proofs.',
-      icon: MessageSquare,
-      bgColor: 'bg-retro-teal',
-    },
-    {
-      number: '03',
-      title: 'Approve Design',
-      description: 'Our design specialists check details and send you a digital preview for confirmation.',
-      icon: ClipboardCheck,
-      bgColor: 'bg-retro-sand',
-    },
-    {
-      number: '04',
-      title: 'Print & Deliver',
-      description: 'We run your job on digital/offset presses and ship across Patna & wider Bihar.',
-      icon: CheckSquare,
-      bgColor: 'bg-retro-mustard',
-    }
-  ];
+  const steps = processSteps;
 
   return (
     <section id="process" className="relative w-full py-16 md:py-24 border-b-3 border-retro-charcoal bg-retro-cream">

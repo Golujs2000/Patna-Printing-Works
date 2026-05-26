@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Printer, Phone, Menu, X, MessageSquare } from 'lucide-react';
+import { Phone, Menu, X, MessageSquare } from 'lucide-react';
+import { businessDetails } from '../data/siteData';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,15 +17,19 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="bg-retro-mustard retro-border-sm p-1.5 shadow-[2px_2px_0px_0px_#1E1E1E] group-hover:translate-y-[-2px] group-hover:shadow-[4px_4px_0px_0px_#1E1E1E] transition-all">
-            <Printer className="w-6 h-6 text-retro-charcoal" />
+          <div className="retro-border-sm overflow-hidden shadow-[2px_2px_0px_0px_#1E1E1E] group-hover:translate-y-[-2px] group-hover:shadow-[4px_4px_0px_0px_#1E1E1E] transition-all" style={{width: '44px', height: '44px'}}>
+            <img
+              src="/patna printing logo.jpeg"
+              alt="Patna Printing Works Logo"
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col whitespace-nowrap">
             <span className="font-syne font-extrabold text-lg md:text-xl tracking-tight text-retro-charcoal uppercase leading-none">
-              Patna Printing
+              {businessDetails.name}
             </span>
             <span className="font-grotesk font-medium text-xs tracking-wider text-retro-terracotta uppercase leading-none mt-1">
-              Works • Est. 2024
+              Est. {businessDetails.est}
             </span>
           </div>
         </a>
@@ -45,11 +50,11 @@ export default function Navbar() {
         {/* Action Button */}
         <div className="hidden lg:flex items-center gap-4">
           <a 
-            href="tel:+919472249802"
+            href={`tel:${businessDetails.phoneDial}`}
             className="flex items-center gap-2 font-grotesk font-bold text-sm bg-retro-card retro-border-sm px-4 py-2 hover:bg-retro-sand transition-all text-retro-charcoal"
           >
             <Phone className="w-4 h-4 text-retro-terracotta" />
-            <span>094722 49802</span>
+            <span>{businessDetails.phone}</span>
           </a>
           <a 
             href="#inquiry"
@@ -86,11 +91,11 @@ export default function Navbar() {
             ))}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a 
-                href="tel:+919472249802"
+                href={`tel:${businessDetails.phoneDial}`}
                 className="flex items-center justify-center gap-2 bg-retro-cream border-2 border-retro-charcoal py-2 px-4 text-center text-sm"
               >
                 <Phone className="w-4 h-4 text-retro-terracotta" />
-                <span>Call: 094722 49802</span>
+                <span>Call: {businessDetails.phone}</span>
               </a>
               <a 
                 href="#inquiry"

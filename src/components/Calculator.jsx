@@ -1,85 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Calculator as CalcIcon, Send, Sparkles } from 'lucide-react';
+import { calculatorConfig, businessDetails } from '../data/siteData';
 
-const SERVICE_CONFIGS = {
-  'wedding-cards': {
-    name: 'Wedding Invitation Cards',
-    options: [
-      { id: 'standard', name: 'Standard Card Stock', price: 10 },
-      { id: 'textured', name: 'Textured Craft Paper', price: 18 },
-      { id: 'velvet', name: 'Velvet Finish Card', price: 28 },
-      { id: 'luxury-foil', name: 'Luxury Metallic Gold Foil', price: 45 }
-    ],
-    minQty: 100,
-    maxQty: 2000,
-    defaultQty: 250,
-    qtyLabel: 'Cards'
-  },
-  'flex-banner': {
-    name: 'Flex Banner (by Sq. Ft.)',
-    options: [
-      { id: 'standard-flex', name: 'Standard Glossy Flex', price: 15 },
-      { id: 'star-flex', name: 'Star Heavy Flex (Premium)', price: 25 },
-      { id: 'backlit-flex', name: 'Backlit Glow Flex', price: 45 }
-    ],
-    hasDimensions: true,
-    minQty: 1,
-    maxQty: 10,
-    defaultQty: 1,
-    qtyLabel: 'Banners'
-  },
-  'visiting-cards': {
-    name: 'Visiting / Business Cards',
-    options: [
-      { id: 'glossy', name: 'Standard Glossy Laminated', price: 1.5 },
-      { id: 'matte', name: 'Premium Matte Laminated', price: 2.2 },
-      { id: 'spot-uv', name: 'Elite Spot UV & Velvet', price: 4.5 }
-    ],
-    minQty: 100,
-    maxQty: 5000,
-    defaultQty: 500,
-    qtyLabel: 'Cards'
-  },
-  'handbills': {
-    name: 'Handbills & Pamphlets',
-    options: [
-      { id: 'single-color', name: 'Single-Color Maplitho (Eco)', price: 0.6 },
-      { id: 'multi-80gsm', name: 'Multicolor 80GSM Art Paper', price: 1.2 },
-      { id: 'glossy-130gsm', name: 'Heavy-duty 130GSM Glossy', price: 2.0 }
-    ],
-    minQty: 1000,
-    maxQty: 10000,
-    defaultQty: 2000,
-    qtyLabel: 'Sheets'
-  },
-  'posters': {
-    name: 'High-Resolution Posters',
-    options: [
-      { id: 'a3-standard', name: 'A3 Size (12x18 inch) Poster', price: 20 },
-      { id: 'a2-premium', name: 'A2 Size Premium Poster', price: 60 },
-      { id: 'a1-jumbo', name: 'A1 Size Matte Poster', price: 120 }
-    ],
-    minQty: 5,
-    maxQty: 500,
-    defaultQty: 50,
-    qtyLabel: 'Posters'
-  },
-  'stickers': {
-    name: 'Stickers & Labels',
-    options: [
-      { id: 'paper-label', name: 'Standard Paper Sticker', price: 2.0 },
-      { id: 'vinyl-waterproof', name: 'Waterproof Vinyl Decal', price: 5.0 },
-      { id: 'die-cut-vinyl', name: 'Premium Die-Cut Vinyl', price: 8.0 }
-    ],
-    minQty: 100,
-    maxQty: 10000,
-    defaultQty: 500,
-    qtyLabel: 'Stickers'
-  }
-};
+const SERVICE_CONFIGS = calculatorConfig.SERVICE_CONFIGS;
 
 export default function Calculator({ onSubmitEstimate }) {
-  const [selectedServiceId, setSelectedServiceId] = useState('wedding-cards');
+  const [selectedServiceId, setSelectedServiceId] = useState('invitation-cards');
   const [selectedOptionId, setSelectedOptionId] = useState('standard');
   const [quantity, setQuantity] = useState(250);
   
@@ -141,7 +67,7 @@ export default function Calculator({ onSubmitEstimate }) {
 - Est. Price: ₹${finalPrice.toFixed(0)} (After ${discountPercentage}% bulk discount)
 Please contact me to discuss printing.`;
 
-    const whatsappUrl = `https://wa.me/919472249802?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${businessDetails.whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 
     // Also trigger parent callback to log/prefill if required
