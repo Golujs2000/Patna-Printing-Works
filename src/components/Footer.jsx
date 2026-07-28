@@ -14,9 +14,11 @@ export default function Footer() {
         {/* Top Row: Brand & Back to Top */}
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-8 mb-8 gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md">
-              <Printer className="w-5 h-5" />
-            </div>
+            <img 
+              src="/patna printing logo.jpeg" 
+              alt="Patna Printing Works Logo" 
+              className="w-11 h-11 rounded-xl object-cover border border-slate-700 shadow-md bg-white p-0.5" 
+            />
             <div className="text-left">
               <h3 className="font-sans font-bold text-lg text-white tracking-tight leading-none">
                 {businessDetails.name}
