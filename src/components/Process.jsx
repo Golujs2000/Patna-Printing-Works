@@ -5,21 +5,21 @@ export default function Process() {
   const steps = processSteps;
 
   return (
-    <section id="process" className="relative w-full py-16 md:py-24 border-b-3 border-retro-charcoal bg-retro-cream">
-      <div className="absolute inset-0 dot-grid pointer-events-none" />
+    <section id="process" className="relative w-full py-16 md:py-24 border-b border-slate-200 bg-slate-50 font-sans">
+      <div className="absolute inset-0 dot-grid pointer-events-none opacity-20" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="font-grotesk font-black text-sm tracking-widest text-[#FAF7F2] bg-retro-terracotta retro-border-sm px-3 py-1 shadow-retro-sm">
-            How It Works
+          <span className="font-sans font-bold text-xs tracking-widest text-blue-600 uppercase bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
+            Workstream Guide
           </span>
-          <h2 className="font-syne font-black text-4xl md:text-5xl text-retro-charcoal mt-6">
-            OUR EASY PROCESS
+          <h2 className="font-sans font-black text-3xl md:text-5xl text-slate-900 mt-4 tracking-tight">
+            OUR PRINT WORKFLOW
           </h2>
-          <p className="font-sans text-sm text-retro-charcoal/80 mt-2">
-            Getting premium custom prints in Patna has never been this simple. Follow these steps to get started.
+          <p className="font-sans text-sm text-slate-600 mt-2">
+            Ordering custom prints in Patna is fast, transparent, and hassle-free.
           </p>
         </div>
 
@@ -30,27 +30,27 @@ export default function Process() {
             return (
               <div 
                 key={step.number} 
-                className="bg-retro-cream retro-border p-6 flex flex-col justify-between items-start retro-shadow relative"
+                className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between items-start shadow-sm hover:shadow-xl transition-all relative text-left"
               >
-                {/* Vintage step circle */}
-                <div className="absolute -top-5 -left-3 font-syne font-black text-4xl text-retro-charcoal bg-retro-cream px-2 py-1 retro-border-sm rotate-[-8deg] shadow-retro-sm">
+                {/* Step badge */}
+                <div className="w-10 h-10 rounded-xl bg-blue-600 text-white font-sans font-extrabold text-sm flex items-center justify-center shadow-md mb-4">
                   {step.number}
                 </div>
 
-                <div className="mt-4 w-full">
-                  <div className={`p-3 retro-border-sm ${step.bgColor} text-retro-charcoal w-fit shadow-retro-sm mb-4`}>
-                    <Icon className="w-6 h-6" />
+                <div className="w-full">
+                  <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600 w-fit border border-blue-100 mb-4">
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-syne font-black text-xl text-retro-charcoal mb-2">
+                  <h3 className="font-sans font-bold text-lg text-slate-900 mb-2">
                     {step.title}
                   </h3>
-                  <p className="font-sans text-xs text-retro-charcoal/80 leading-relaxed">
+                  <p className="font-sans text-xs text-slate-600 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
 
-                <div className="mt-6 font-mono text-[9px] text-retro-charcoal/50 font-bold uppercase tracking-wider">
-                  ★ STEP COMPLETE ★
+                <div className="mt-6 font-sans text-[11px] text-emerald-600 font-bold uppercase tracking-wider flex items-center gap-1">
+                  <span>✓ FAST TURNAROUND</span>
                 </div>
               </div>
             );
@@ -60,3 +60,4 @@ export default function Process() {
     </section>
   );
 }
+

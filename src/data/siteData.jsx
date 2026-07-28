@@ -42,6 +42,7 @@ export const businessDetails = {
 
 export const heroContent = {
   tickerItems: [
+    '🩺 Custom Doctor File & Medical Case Folder Printing',
     '🔥 Wedding Card Printing Specialists',
     '⚡ High Quality Flex Banners',
     '💎 Premium Visiting Cards & Flyers',
@@ -54,7 +55,7 @@ export const heroContent = {
     highlight: 'YOUR IDEAS',
     suffix: 'ON PAPER & FLEX.'
   },
-  description: 'From luxury Wedding Invitation Cards to vibrant Flex Banners, Rollup Standees, Welcome Boards, and wholesale Visiting Cards — Patna Printing Works delivers state-of-the-art digital printing across Bihar & Jharkhand, right from the heart of Bari Path, Dariyapur.',
+  description: 'From luxury Wedding Invitation Cards and Doctor Case File Folders to vibrant Flex Banners, Rollup Standees, Welcome Boards, and wholesale Visiting Cards — Patna Printing Works delivers state-of-the-art digital printing across Bihar & Jharkhand, right from the heart of Bari Path, Dariyapur.',
   features: [
     { title: 'Fast Turnaround', desc: 'Ready in 24-48 Hours', icon: Zap },
     { title: 'Wholesale Prices', desc: 'Bulk Printing Discounts', icon: Award },
@@ -67,10 +68,10 @@ export const heroContent = {
     subtitle: 'Birthday • Wedding • Grih Pravesh',
     list: [
       { label: '🎉 Invitation Cards (B\'day / Wedding / GP)', price: '₹300 / 50 pcs' },
+      { label: '🩺 Doctor Case File / Prescription Folders', price: '₹1,200 / 100 pcs' },
       { label: '🪧 Welcome Board (incl. Wooden Stand)', price: '₹1,800 / pc' },
       { label: '🖼️ Rollup Standee (6ft × 3ft)', price: '₹1,200 / pc' },
-      { label: '🗓️ Promo Table', price: '₹2,800 / pc' },
-      { label: '☂️ Promo Umbrella (incl. Stand)', price: '₹1,800 / pc' }
+      { label: '🗓️ Promo Table', price: '₹2,800 / pc' }
     ],
     actionLabel: 'Calculate Your Estimate',
     footer: '★ FREE DELIVERY ACROSS BIHAR & JHARKHAND ★'
@@ -79,13 +80,30 @@ export const heroContent = {
 
 export const services = [
   {
+    id: 'doctor-file',
+    title: 'Doctor File Printing',
+    description: 'Custom doctor prescription folders, patient case file folders, and diagnostic report covers with single/double inside pockets and heavy laminated cardstock.',
+    accent: 'bg-retro-peach',
+    features: ['300 / 350 GSM Heavy Cardstock', 'Single & Double Inner Pocket', 'Gloss / Matte Lamination', 'Custom Branding & Patient History Fields'],
+    minOrder: '100 Folders',
+    image: '/service_doctor_file.webp',
+    renderIllustration: () => (
+      <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-peach" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="18" y="15" width="64" height="70" rx="3" />
+        <path d="M18 55h64" strokeDasharray="3 3" />
+        <path d="M50 25v20M40 35h20" stroke="#D35230" strokeWidth="4" strokeLinecap="square" />
+        <path d="M28 65h44M28 73h28" />
+      </svg>
+    )
+  },
+  {
     id: 'wedding-card',
     title: 'Invitation Card Printing',
     description: 'Elegant custom invitation cards for weddings, birthdays & Grih Pravesh — with luxury finishes, textured stocks, golden & silver sheets, and fancy designer cards.',
     accent: 'bg-retro-peach',
     features: ['Textured Cardstocks', 'Golden & Silver Sheet', 'Laser Cut Designs', 'Fancy Card Invitation'],
     minOrder: '50 Cards',
-    image: '/service_invitation_cards.png',
+    image: '/service_invitation_cards.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-peach" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M15 20h30v60H15z" />
@@ -103,7 +121,7 @@ export const services = [
     accent: 'bg-retro-teal',
     features: ['Standard & Star Flex', 'Glossy & Matte Finishes', 'Metal Eyelets / Grommets', 'High Resolution Solvent Print'],
     minOrder: '20 Sq. Ft.',
-    image: '/service_flex_banner.png',
+    image: '/service_flex_banner.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-teal" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="10" y="25" width="80" height="40" rx="2" />
@@ -124,7 +142,7 @@ export const services = [
     accent: 'bg-retro-sand',
     features: ['Premium Matte Print', 'Sturdy Aluminum Base', 'Carry Bag Included', 'Easy 1-Min Assembly'],
     minOrder: '1 Standee',
-    image: '/service_rollup_standee.png',
+    image: '/service_rollup_standee.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-sand" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="35" y="80" width="30" height="6" rx="1" />
@@ -144,7 +162,7 @@ export const services = [
     accent: 'bg-retro-mustard',
     features: ['Maplitho & Glossy Paper', 'Single / Multi-color Offset', 'A4, A5, & A6 Standard Sizes', 'Cost-effective Bulk Packs'],
     minOrder: '1,000 Pcs',
-    image: '/service_handbills.png',
+    image: '/service_handbills.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-mustard" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M25 15h35l12 12v50H25z" fill="#EADFC9" />
@@ -161,7 +179,7 @@ export const services = [
     accent: 'bg-retro-peach',
     features: ['300GSM Card Stock', 'Matte/Gloss Lamination', 'Rounded Corner Cut', 'Premium Spot UV'],
     minOrder: '100 Pcs',
-    image: '/service_visiting_cards.png',
+    image: '/service_visiting_cards.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-peach" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="10" y="25" width="80" height="50" rx="3" />
@@ -178,7 +196,7 @@ export const services = [
     accent: 'bg-retro-teal',
     features: ['12x18 inch, A3, A2, A1 Sizes', '220GSM Matte/Photo Paper', 'Fade-Resistant Pigment Ink', 'Self-Adhesive Option'],
     minOrder: '5 Pcs',
-    image: '/service_posters.png',
+    image: '/service_posters.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-teal" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="22" y="15" width="56" height="70" />
@@ -195,7 +213,7 @@ export const services = [
     accent: 'bg-retro-sand',
     features: ['Waterproof Vinyl Option', 'Mirror Coat Chrome Stickers', 'Pre-cut Sheet Labels', 'Die-cut Custom Shapes'],
     minOrder: '100 Pcs',
-    image: '/service_stickers.png',
+    image: '/service_stickers.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-sand" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M50 15A35 35 0 0 0 17 65" strokeDasharray="3 3" />
@@ -213,7 +231,7 @@ export const services = [
     accent: 'bg-retro-mustard',
     features: ['Carbonless Bill Books', 'Brochures & Booklets', 'Receipt & Voucher Pads', 'Multi-page Binding Services', 'Handbill Printing', 'Calendar Printing'],
     minOrder: '10 Books',
-    image: '/service_offset_bulk.png',
+    image: '/service_offset_bulk.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-mustard" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="20" y="42" width="60" height="32" rx="2" />
@@ -231,6 +249,18 @@ export const services = [
 
 export const calculatorConfig = {
   SERVICE_CONFIGS: {
+    'doctor-file': {
+      name: 'Doctor File / Case Folder',
+      options: [
+        { id: 'standard-300gsm', name: 'Standard 300GSM (Single Pocket)', price: 12 },
+        { id: 'premium-laminated', name: 'Premium Laminated 350GSM (Single Pocket)', price: 16 },
+        { id: 'double-pocket-uv', name: 'Elite 350GSM Double Pocket + Spot UV', price: 22 }
+      ],
+      minQty: 100,
+      maxQty: 5000,
+      defaultQty: 500,
+      qtyLabel: 'Folders'
+    },
     'invitation-cards': {
       name: 'Invitation Card Printing',
       options: [
@@ -364,6 +394,7 @@ export const processSteps = [
 ];
 
 export const servicesListSimple = [
+  'Doctor File / Prescription Folder',
   'Wedding Card Printing',
   'Flex Banner Printing',
   'Rollup Standee',

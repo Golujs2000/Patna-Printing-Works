@@ -1,0 +1,6 @@
+# Patna Printing Works Robots.txt for Search Engines
+User-agent: *
+Allow: /
+
+# Priority Sitemaps
+Sitemap: https://patnaprintingworks.com/sitemap.xml

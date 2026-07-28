@@ -3,88 +3,85 @@ import { Sparkles, MessageSquare, ArrowRight, ShieldCheck, Zap, Award } from 'lu
 import { heroContent } from '../data/siteData';
 
 export default function Hero() {
-  const iconColors = ['text-retro-terracotta', 'text-retro-teal', 'text-retro-sage'];
-
   return (
-    <section className="relative w-full overflow-hidden border-b-3 border-retro-charcoal py-12 md:py-20 lg:py-24 bg-retro-cream">
-      {/* Decorative dot grids in background */}
+    <section className="relative w-full overflow-hidden bg-slate-50 border-b border-slate-200 py-16 md:py-24">
+      {/* Subtle modern dot grid */}
       <div className="absolute inset-0 dot-grid pointer-events-none" />
-      
-      {/* Top Ticker / Marquee Banner */}
-      <div className="absolute top-0 left-0 w-full bg-retro-terracotta border-b-3 border-retro-charcoal overflow-hidden py-2 text-[#FAF7F2] font-grotesk font-black text-xs md:text-sm tracking-widest uppercase select-none">
+
+      {/* Ticker / Marquee Banner */}
+      <div className="w-full bg-slate-900 text-white overflow-hidden py-2.5 font-sans font-semibold text-xs md:text-sm tracking-wide uppercase select-none">
         <div className="flex w-[200%] animate-marquee whitespace-nowrap">
           {heroContent.tickerItems.map((item, index) => (
             <React.Fragment key={index}>
-              <span className="mx-4 flex items-center gap-2">{item}</span>
-              <span className="mx-4">•</span>
+              <span className="mx-4 flex items-center gap-2 text-emerald-400 font-bold">{item}</span>
+              <span className="mx-2 text-slate-600">•</span>
             </React.Fragment>
           ))}
-          {/* Duplicate for seamless looping */}
           {heroContent.tickerItems.map((item, index) => (
             <React.Fragment key={`dup-${index}`}>
-              <span className="mx-4 flex items-center gap-2">{item}</span>
-              <span className="mx-4">•</span>
+              <span className="mx-4 flex items-center gap-2 text-emerald-400 font-bold">{item}</span>
+              <span className="mx-2 text-slate-600">•</span>
             </React.Fragment>
           ))}
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column: Bold Typography & Advertising Copy */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
-          {/* Vintage Badge */}
-          <div className="inline-flex items-center gap-2 bg-retro-peach retro-border-sm px-3.5 py-1.5 mb-6 shadow-retro-sm">
-            <Sparkles className="w-4 h-4 text-retro-terracotta fill-retro-terracotta" />
-            <span className="font-grotesk font-extrabold text-xs md:text-sm tracking-wide text-retro-charcoal uppercase">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        
+        {/* Left Column: Tech Hero Copy */}
+        <div className="lg:col-span-7 flex flex-col items-start text-left">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded-full mb-6 shadow-sm">
+            <Sparkles className="w-4 h-4 text-blue-600 fill-blue-600" />
+            <span className="font-sans font-bold text-xs text-blue-700 uppercase tracking-wider">
               {heroContent.badge}
             </span>
           </div>
 
           {/* Main Title */}
-          <h1 className="font-syne font-black text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-retro-charcoal tracking-tight mb-6">
-            {heroContent.title.prefix} <br />
-            <span className="text-retro-terracotta relative">
-              {heroContent.title.highlight}
-              <span className="absolute left-0 bottom-0 w-full h-2 bg-retro-mustard -z-10 transform -rotate-1"></span>
+          <h1 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1.08] text-slate-900 tracking-tight mb-6">
+            WE PRINT <br />
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent">
+              YOUR BIG IDEAS
             </span> <br />
-            {heroContent.title.suffix}
+            ON PAPER & FLEX.
           </h1>
 
-          {/* Supporting Text */}
-          <p className="font-sans text-base md:text-lg text-retro-charcoal/90 max-w-xl mb-8 leading-relaxed">
+          {/* Subtitle */}
+          <p className="font-sans text-base md:text-lg text-slate-600 max-w-xl mb-8 leading-relaxed">
             {heroContent.description}
           </p>
 
-          {/* Call to Actions */}
+          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a 
               href="#inquiry"
-              className="retro-btn bg-retro-mustard hover:bg-retro-mustard/90 text-retro-charcoal text-base md:text-lg px-8 py-3.5 flex items-center justify-center gap-3"
+              className="flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-sans font-bold text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all"
             >
               <MessageSquare className="w-5 h-5" />
               <span>Inquire via WhatsApp</span>
             </a>
             <a 
               href="#calculator"
-              className="retro-btn bg-retro-cream hover:bg-retro-sand text-retro-charcoal text-base md:text-lg px-8 py-3.5 flex items-center justify-center gap-2 border-retro-charcoal"
+              className="flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-sans font-bold text-base px-8 py-3.5 rounded-xl border border-slate-300 shadow-sm transition-all"
             >
-              <span>Instant Estimate</span>
-              <ArrowRight className="w-5 h-5 text-retro-terracotta" />
+              <span>Instant Price Calculator</span>
+              <ArrowRight className="w-5 h-5 text-blue-600" />
             </a>
           </div>
 
-          {/* Mini Features List */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 mt-12 pt-8 border-t-2 border-retro-charcoal/20 w-full">
+          {/* Feature Pills */}
+          <div className="grid grid-cols-3 gap-4 md:gap-6 mt-12 pt-8 border-t border-slate-200 w-full">
             {heroContent.features.map((feat, index) => {
               const Icon = feat.icon;
               return (
-                <div key={index} className="flex flex-col md:flex-row items-start md:items-center gap-2">
-                  <div className={`bg-retro-sand p-1.5 retro-border-sm ${iconColors[index % iconColors.length]}`}>
+                <div key={index} className="flex flex-col md:flex-row items-start md:items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 shrink-0">
                     <Icon className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-grotesk font-black text-xs md:text-sm text-retro-charcoal uppercase leading-none">{feat.title}</h4>
-                    <span className="text-[10px] md:text-xs text-retro-charcoal/70">{feat.desc}</span>
+                    <h4 className="font-sans font-bold text-xs md:text-sm text-slate-900 leading-none">{feat.title}</h4>
+                    <span className="text-[11px] text-slate-500">{feat.desc}</span>
                   </div>
                 </div>
               );
@@ -92,53 +89,55 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Retro Graphic Poster / Showcase */}
-        <div className="lg:col-span-5 flex justify-center items-center z-10">
-          <div className="relative w-full max-w-sm bg-retro-card retro-border p-6 md:p-8 retro-shadow-lg">
+        {/* Right Column: Modern Tech Showcase Card */}
+        <div className="lg:col-span-5 flex justify-center items-center">
+          <div className="relative w-full max-w-md bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-xl">
             {/* Corner Badge */}
-            <div className="absolute -top-5 -right-5 bg-retro-terracotta text-[#FAF7F2] font-syne font-extrabold text-xs md:text-sm px-4 py-2 rotate-12 retro-border shadow-retro-sm">
+            <div className="absolute -top-4 -right-4 bg-emerald-600 text-white font-sans font-bold text-xs px-4 py-1.5 rounded-full shadow-md">
               {heroContent.dealsCard.badge}
             </div>
 
             {/* Poster Header */}
-            <div className="text-center border-b-2 border-dashed border-retro-charcoal/50 pb-4 mb-4">
-              <span className="font-grotesk font-black text-xs text-retro-terracotta uppercase tracking-widest">
+            <div className="text-left border-b border-slate-100 pb-4 mb-6">
+              <span className="font-sans font-bold text-xs text-blue-600 uppercase tracking-wider block">
                 {heroContent.dealsCard.header}
               </span>
-              <h3 className="font-serif font-black text-2xl md:text-3xl text-retro-charcoal mt-1">
+              <h3 className="font-sans font-extrabold text-2xl md:text-3xl text-slate-900 mt-1">
                 {heroContent.dealsCard.title}
               </h3>
-              <p className="font-grotesk font-bold text-xs text-retro-charcoal/70 mt-1">
+              <p className="font-sans text-xs text-slate-500 mt-1">
                 {heroContent.dealsCard.subtitle}
               </p>
             </div>
 
-            {/* Service Details List inside Card */}
-            <div className="space-y-3 font-grotesk text-sm text-retro-charcoal/90 mb-6">
+            {/* Price Deals List */}
+            <div className="space-y-3 font-sans text-xs text-slate-700 mb-6">
               {heroContent.dealsCard.list.map((item, index) => (
-                <div key={index} className="flex justify-between items-center bg-retro-cream p-2 retro-border-sm shadow-retro-sm">
-                  <span>{item.label}</span>
-                  <span className="font-bold text-retro-terracotta">{item.price}</span>
+                <div key={index} className="flex justify-between items-center bg-slate-50 p-3 rounded-xl border border-slate-100">
+                  <span className="font-medium text-slate-800">{item.label}</span>
+                  <span className="font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md">{item.price}</span>
                 </div>
               ))}
             </div>
 
-            {/* Action inside poster */}
+            {/* Action */}
             <a 
               href="#calculator" 
-              className="w-full bg-retro-mustard hover:bg-retro-mustard/90 text-retro-charcoal text-center font-grotesk font-extrabold py-3 border-2 border-retro-charcoal shadow-retro-sm block transition-all"
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-sans font-bold text-sm py-3 rounded-xl shadow-md block transition-all"
             >
               {heroContent.dealsCard.actionLabel}
             </a>
 
             <div className="text-center mt-4">
-              <span className="text-[10px] font-mono text-retro-charcoal/60 uppercase">
+              <span className="text-[11px] font-sans font-semibold text-slate-400 uppercase">
                 {heroContent.dealsCard.footer}
               </span>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
 }
+

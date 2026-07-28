@@ -70,7 +70,6 @@ Please contact me to discuss printing.`;
     const whatsappUrl = `https://wa.me/${businessDetails.whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 
-    // Also trigger parent callback to log/prefill if required
     if (onSubmitEstimate) {
       onSubmitEstimate({
         service: currentService.name,
@@ -81,42 +80,42 @@ Please contact me to discuss printing.`;
   };
 
   return (
-    <section id="calculator" className="relative w-full py-16 md:py-24 border-b-3 border-retro-charcoal bg-retro-card">
-      <div className="absolute inset-0 dot-grid pointer-events-none" />
+    <section id="calculator" className="relative w-full py-16 md:py-24 border-b border-slate-200 bg-slate-50">
+      <div className="absolute inset-0 dot-grid pointer-events-none opacity-20" />
 
-      <div className="max-w-5xl mx-auto px-4 md:px-8 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 relative z-10 font-sans">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-retro-mustard retro-border-sm px-4 py-1.5 shadow-retro-sm">
-            <CalcIcon className="w-5 h-5 text-retro-charcoal" />
-            <span className="font-grotesk font-black text-sm tracking-widest text-retro-charcoal uppercase">
-              Retro Calculator
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded-full mb-4">
+            <CalcIcon className="w-4 h-4 text-blue-600" />
+            <span className="font-sans font-bold text-xs text-blue-700 uppercase tracking-wider">
+              Live Estimator Widget
             </span>
           </div>
-          <h2 className="font-syne font-black text-3xl md:text-5xl text-retro-charcoal mt-6">
-            ESTIMATE YOUR PRICE
+          <h2 className="font-sans font-black text-3xl md:text-5xl text-slate-900 tracking-tight">
+            ESTIMATE YOUR PRINT PRICE
           </h2>
-          <p className="font-sans text-sm text-retro-charcoal/80 mt-2">
-            Pick your service, select printing paper specs, set your quantity, and watch the bulk discount apply instantly!
+          <p className="font-sans text-sm text-slate-600 mt-2">
+            Select your service, choose paper quality, set your quantity, and watch bulk discounts apply instantly!
           </p>
         </div>
 
-        {/* Calculator Widget */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 retro-border bg-retro-cream p-6 md:p-10 retro-shadow-lg">
+        {/* Calculator Card */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 bg-white rounded-2xl border border-slate-200 p-6 md:p-10 shadow-xl">
           
           {/* Inputs Section */}
-          <div className="md:col-span-7 flex flex-col gap-6 text-left border-b-2 md:border-b-0 md:border-r-2 border-dashed border-retro-charcoal/30 pb-8 md:pb-0 md:pr-8">
+          <div className="md:col-span-7 flex flex-col gap-6 text-left border-b md:border-b-0 md:border-r border-slate-200 pb-8 md:pb-0 md:pr-8">
             
             {/* Service Dropdown */}
             <div>
-              <label htmlFor="calc-service" className="block font-grotesk font-black text-sm text-retro-charcoal uppercase tracking-wider mb-2">
+              <label htmlFor="calc-service" className="block font-sans font-bold text-xs text-slate-700 uppercase tracking-wider mb-2">
                 1. Select Service Type
               </label>
               <select
                 id="calc-service"
                 value={selectedServiceId}
                 onChange={(e) => setSelectedServiceId(e.target.value)}
-                className="w-full bg-retro-cream retro-border-sm p-3 font-grotesk font-bold text-retro-charcoal focus:outline-none focus:bg-retro-peach transition-all"
+                className="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 font-sans font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
               >
                 {Object.entries(SERVICE_CONFIGS).map(([id, config]) => (
                   <option key={id} value={id}>{config.name}</option>
@@ -126,8 +125,8 @@ Please contact me to discuss printing.`;
 
             {/* Printing Option Select */}
             <div>
-              <label className="block font-grotesk font-black text-sm text-retro-charcoal uppercase tracking-wider mb-2">
-                2. Choose Paper / Print Quality
+              <label className="block font-sans font-bold text-xs text-slate-700 uppercase tracking-wider mb-2">
+                2. Choose Paper / Finish Quality
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {currentService.options.map((opt) => (
@@ -135,14 +134,14 @@ Please contact me to discuss printing.`;
                     key={opt.id}
                     type="button"
                     onClick={() => setSelectedOptionId(opt.id)}
-                    className={`text-left p-3 retro-border-sm font-grotesk font-bold flex flex-col justify-between transition-all ${
+                    className={`text-left p-3 rounded-xl border font-sans text-xs font-semibold flex flex-col justify-between transition-all ${
                       selectedOptionId === opt.id 
-                        ? 'bg-retro-peach border-retro-charcoal shadow-retro-sm translate-y-[-1px]' 
-                        : 'bg-retro-cream/50 text-retro-charcoal/80 hover:bg-retro-cream'
+                        ? 'bg-blue-50 border-blue-500 text-blue-900 shadow-sm' 
+                        : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                     }`}
                   >
-                    <span className="text-sm">{opt.name}</span>
-                    <span className="text-xs text-retro-terracotta mt-1">₹{opt.price} {currentService.hasDimensions ? '/ sq.ft' : '/ pc'}</span>
+                    <span className="font-bold">{opt.name}</span>
+                    <span className="text-[11px] text-blue-600 font-bold mt-1">₹{opt.price} {currentService.hasDimensions ? '/ sq.ft' : '/ pc'}</span>
                   </button>
                 ))}
               </div>
@@ -152,7 +151,7 @@ Please contact me to discuss printing.`;
             {currentService.hasDimensions && (
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="width-input" className="block font-grotesk font-black text-xs text-retro-charcoal uppercase tracking-wider mb-2">
+                  <label htmlFor="width-input" className="block font-sans font-bold text-xs text-slate-700 uppercase tracking-wider mb-2">
                     Banner Width (Feet)
                   </label>
                   <input
@@ -162,11 +161,11 @@ Please contact me to discuss printing.`;
                     max="100"
                     value={width}
                     onChange={(e) => setWidth(Math.max(1, parseInt(e.target.value) || 1))}
-                    className="w-full bg-retro-cream retro-border-sm p-2 font-grotesk font-bold text-retro-charcoal focus:outline-none"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 font-sans font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div>
-                  <label htmlFor="height-input" className="block font-grotesk font-black text-xs text-retro-charcoal uppercase tracking-wider mb-2">
+                  <label htmlFor="height-input" className="block font-sans font-bold text-xs text-slate-700 uppercase tracking-wider mb-2">
                     Banner Height (Feet)
                   </label>
                   <input
@@ -176,7 +175,7 @@ Please contact me to discuss printing.`;
                     max="100"
                     value={height}
                     onChange={(e) => setHeight(Math.max(1, parseInt(e.target.value) || 1))}
-                    className="w-full bg-retro-cream retro-border-sm p-2 font-grotesk font-bold text-retro-charcoal focus:outline-none"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 font-sans font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
@@ -185,8 +184,8 @@ Please contact me to discuss printing.`;
             {/* Quantity Slider & Input */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label htmlFor="qty-slider" className="font-grotesk font-black text-sm text-retro-charcoal uppercase tracking-wider">
-                  3. Enter Quantity
+                <label htmlFor="qty-slider" className="font-sans font-bold text-xs text-slate-700 uppercase tracking-wider">
+                  3. Select Quantity
                 </label>
                 <div className="flex items-center gap-2">
                   <input
@@ -196,9 +195,9 @@ Please contact me to discuss printing.`;
                     max={currentService.maxQty}
                     value={quantity}
                     onChange={(e) => setQuantity(Math.max(currentService.minQty, parseInt(e.target.value) || currentService.minQty))}
-                    className="w-20 bg-retro-cream retro-border-sm p-1 text-center font-grotesk font-black text-sm text-retro-charcoal focus:outline-none"
+                    className="w-24 bg-slate-50 border border-slate-300 rounded-xl p-1.5 text-center font-sans font-bold text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
-                  <span className="font-grotesk text-xs text-retro-charcoal/60 font-bold">{currentService.qtyLabel}</span>
+                  <span className="font-sans text-xs text-slate-500 font-semibold">{currentService.qtyLabel}</span>
                 </div>
               </div>
               <input
@@ -209,9 +208,9 @@ Please contact me to discuss printing.`;
                 step={currentService.minQty >= 1000 ? 500 : currentService.minQty >= 100 ? 50 : 1}
                 value={quantity}
                 onChange={(e) => setQuantity(parseInt(e.target.value))}
-                className="w-full h-3 bg-retro-sand rounded-none border-2 border-retro-charcoal appearance-none cursor-pointer accent-retro-terracotta"
+                className="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
               />
-              <div className="flex justify-between font-mono text-[10px] text-retro-charcoal/60 mt-1.5 font-bold">
+              <div className="flex justify-between font-sans text-[11px] text-slate-500 mt-1.5 font-semibold">
                 <span>MIN: {currentService.minQty}</span>
                 <span>MAX: {currentService.maxQty}</span>
               </div>
@@ -219,46 +218,46 @@ Please contact me to discuss printing.`;
 
           </div>
 
-          {/* Outputs/Reciept Section */}
+          {/* Outputs / Estimate Receipt Section */}
           <div className="md:col-span-5 flex flex-col justify-between text-left">
-            <div className="bg-retro-cream/80 retro-border-sm p-5 border-dashed border-2 border-retro-charcoal relative">
+            <div className="bg-slate-50 rounded-xl border border-slate-200 p-5 relative">
               
               {/* Receipt Visual Header */}
-              <div className="text-center pb-4 mb-4 border-b-2 border-dashed border-retro-charcoal/30">
-                <span className="font-mono text-xs uppercase tracking-widest font-black text-retro-charcoal/70">ESTIMATE RECEIPT</span>
-                <p className="font-grotesk font-bold text-xs text-retro-terracotta mt-1">{currentService.name}</p>
+              <div className="text-center pb-4 mb-4 border-b border-slate-200">
+                <span className="font-sans text-xs uppercase tracking-widest font-bold text-slate-400">ESTIMATE SUMMARY</span>
+                <p className="font-sans font-bold text-sm text-blue-600 mt-1">{currentService.name}</p>
               </div>
 
               {/* Specs Details */}
-              <div className="space-y-3 font-grotesk text-xs text-retro-charcoal/80 mb-6">
+              <div className="space-y-3 font-sans text-xs text-slate-600 mb-6">
                 <div className="flex justify-between">
                   <span>Selected Option:</span>
-                  <span className="font-bold text-right max-w-[150px] truncate">{selectedOption.name}</span>
+                  <span className="font-bold text-slate-900 text-right max-w-[160px] truncate">{selectedOption.name}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Rates:</span>
-                  <span className="font-bold">₹{selectedOption.price} {currentService.hasDimensions ? '/ sq.ft' : '/ pc'}</span>
+                  <span>Rate:</span>
+                  <span className="font-bold text-slate-900">₹{selectedOption.price} {currentService.hasDimensions ? '/ sq.ft' : '/ pc'}</span>
                 </div>
                 {currentService.hasDimensions && (
                   <div className="flex justify-between">
                     <span>Banner Size:</span>
-                    <span className="font-bold">{width} × {height} ft ({width * height} sq.ft)</span>
+                    <span className="font-bold text-slate-900">{width} × {height} ft ({width * height} sq.ft)</span>
                   </div>
                 )}
                 <div className="flex justify-between">
                   <span>Total Quantity:</span>
-                  <span className="font-bold">{quantity} {currentService.qtyLabel}</span>
+                  <span className="font-bold text-slate-900">{quantity} {currentService.qtyLabel}</span>
                 </div>
-                <div className="flex justify-between border-t border-dashed border-retro-charcoal/30 pt-2">
+                <div className="flex justify-between border-t border-slate-200 pt-2.5">
                   <span>Subtotal Price:</span>
-                  <span className="font-bold text-sm text-retro-charcoal">₹{basePrice.toFixed(0)}</span>
+                  <span className="font-bold text-sm text-slate-900">₹{basePrice.toFixed(0)}</span>
                 </div>
                 
                 {/* Discount */}
                 {discountPercentage > 0 && (
-                  <div className="flex justify-between items-center bg-retro-peach p-1.5 retro-border-sm text-retro-terracotta">
+                  <div className="flex justify-between items-center bg-emerald-50 p-2 rounded-lg border border-emerald-200 text-emerald-700">
                     <span className="flex items-center gap-1 font-bold">
-                      <Sparkles className="w-3.5 h-3.5 fill-retro-terracotta text-retro-terracotta" />
+                      <Sparkles className="w-3.5 h-3.5 fill-emerald-600 text-emerald-600" />
                       Bulk Discount ({discountPercentage}%):
                     </span>
                     <span className="font-black">-₹{discountAmount.toFixed(0)}</span>
@@ -266,13 +265,13 @@ Please contact me to discuss printing.`;
                 )}
               </div>
 
-              {/* Big Final Total */}
-              <div className="bg-retro-cream p-4 retro-border-sm shadow-retro-sm text-center">
-                <span className="font-grotesk font-bold text-xs text-retro-charcoal/60 uppercase block">ESTIMATED GRAND TOTAL</span>
-                <span className="font-syne font-black text-3xl md:text-4xl text-retro-charcoal">
+              {/* Grand Total Display */}
+              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
+                <span className="font-sans font-bold text-xs text-slate-400 uppercase block">ESTIMATED TOTAL</span>
+                <span className="font-sans font-black text-3xl md:text-4xl text-slate-900">
                   ₹{finalPrice.toFixed(0)}
                 </span>
-                <span className="font-mono text-[9px] block text-retro-charcoal/50 mt-1">EXCLUDING GST & DELIVERIES</span>
+                <span className="font-sans text-[10px] block text-slate-400 mt-1 uppercase font-semibold">Excluding GST & Shipping</span>
               </div>
             </div>
 
@@ -281,13 +280,13 @@ Please contact me to discuss printing.`;
               <button
                 type="button"
                 onClick={handleWhatsAppSend}
-                className="w-full retro-btn bg-retro-mustard hover:bg-retro-mustard/90 text-retro-charcoal text-base flex justify-center items-center gap-3 py-3.5 shadow-retro hover:shadow-retro-sm hover:translate-x-[2px] hover:translate-y-[2px]"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-sans font-bold text-sm flex justify-center items-center gap-3 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all"
               >
                 <Send className="w-5 h-5" />
-                <span>Submit to WhatsApp</span>
+                <span>Submit Estimate via WhatsApp</span>
               </button>
-              <span className="font-sans text-[10px] text-retro-charcoal/60 mt-2 block text-center italic">
-                * Note: Prices are indicative. Press the button to verify availability, get discount proofs, or request customizations.
+              <span className="font-sans text-[11px] text-slate-500 mt-2 block text-center italic">
+                * Note: Indicative rates. Tap button to confirm design proofs & custom orders.
               </span>
             </div>
 
@@ -298,3 +297,4 @@ Please contact me to discuss printing.`;
     </section>
   );
 }
+
