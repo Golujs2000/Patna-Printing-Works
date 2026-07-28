@@ -92,7 +92,11 @@ Please provide a quote and sample proofs.`;
                 {/* Active Image */}
                 <img
                   src={activeMockup.url}
-                  alt={activeMockup.title}
+                  alt={`${activeMockup.title} - Patna Printing Works`}
+                  loading="eager"
+                  fetchPriority="high"
+                  width="800"
+                  height="600"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
 
@@ -148,7 +152,10 @@ Please provide a quote and sample proofs.`;
                   <div className="w-full h-16 sm:h-20 overflow-hidden rounded-lg border border-slate-200 mb-1.5 bg-slate-100">
                     <img
                       src={mock.url}
-                      alt={mock.title}
+                      alt={`${mock.title} thumbnail`}
+                      loading="lazy"
+                      width="200"
+                      height="150"
                       className="w-full h-full object-cover"
                     />
                   </div>

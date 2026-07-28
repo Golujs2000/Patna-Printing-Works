@@ -6,20 +6,20 @@ export const serviceDetailsMap = {
     title: 'Doctor File & Case Folder Printing',
     subtitle: 'Professional 300/350 GSM Patient Case Folders with Pockets & Custom Branding',
     category: 'Medical & Clinic Stationary',
-    heroImage: '/service_doctor_file.png',
+    heroImage: '/service_doctor_file.webp',
     mockups: [
       {
-        url: '/service_doctor_file.png',
+        url: '/service_doctor_file.webp',
         title: '3D Bi-Fold Doctor Case Folder Mockup',
         caption: 'Clean white & royal blue bi-fold medical folder featuring doctor clinic logo, circular anatomical icons, stethoscope graphic, and doctor qualification details.'
       },
       {
-        url: '/mockups/doctor_file_exact_2.png',
+        url: '/mockups/doctor_file_exact_2.webp',
         title: 'Perspective Angle Folder Presentation',
         caption: 'High-definition perspective view of printed 300GSM patient case file folder with custom branding and curved geometric accents.'
       },
       {
-        url: '/mockups/doctor_file_modern_2.png',
+        url: '/mockups/doctor_file_modern_2.webp',
         title: 'Inside Document Pocket & Prescription Holder',
         caption: 'Opened medical case folder showing glued document pocket holding prescription paper sheets and lab report charts.'
       }
@@ -74,20 +74,20 @@ export const serviceDetailsMap = {
     title: 'Invitation Card Printing',
     subtitle: 'Luxury Designer Cards for Weddings, Birthdays, Grih Pravesh & Anniversaries',
     category: 'Special Events & Luxury Cards',
-    heroImage: '/service_invitation_cards.png',
+    heroImage: '/service_invitation_cards.webp',
     mockups: [
       {
-        url: '/service_invitation_cards.png',
+        url: '/service_invitation_cards.webp',
         title: 'Traditional & Modern Card Collection',
         caption: 'Extensive designer card showcase with textured cardstock, laser-cut gates, and vibrant foil highlights.'
       },
       {
-        url: '/mockups/wedding_card_envelope_1785239815328.png',
+        url: '/mockups/wedding_card_envelope_1785239815328.webp',
         title: 'Custom Envelopes with Golden Foil',
         caption: 'Matching designer envelopes with metallic gold foil stamping, custom monograms, and RSVP inserts.'
       },
       {
-        url: '/service_visiting_cards.png',
+        url: '/service_visiting_cards.webp',
         title: 'Textured & Metallic Sheet Options',
         caption: 'Golden sheets, silver shimmer paper, and embossed floral borders tailored for Indian ceremonies.'
       }
@@ -138,15 +138,15 @@ export const serviceDetailsMap = {
     title: 'Flex Banner Printing',
     subtitle: 'Vibrant Weatherproof Outdoor Banners & Shop Signboards',
     category: 'Outdoor Advertising & Banners',
-    heroImage: '/service_flex_banner.png',
+    heroImage: '/service_flex_banner.webp',
     mockups: [
       {
-        url: '/service_flex_banner.png',
+        url: '/service_flex_banner.webp',
         title: 'High-Resolution Outdoor Flex Banner',
         caption: 'Weatherproof solvent digital printing with vibrant UV-resistant inks that remain crisp under direct sunlight.'
       },
       {
-        url: '/service_rollup_standee.png',
+        url: '/service_rollup_standee.webp',
         title: 'Star Heavy & Backlit Flex Finishes',
         caption: 'Heavy-duty Star Flex for high durability, smooth surface finish, and glow signboard installation.'
       }
@@ -196,15 +196,15 @@ export const serviceDetailsMap = {
     title: 'Rollup Standee Banners',
     subtitle: 'Portable Self-Standing Exhibition Banners with Sturdy Aluminum Base',
     category: 'Exhibition & Promo Displays',
-    heroImage: '/service_rollup_standee.png',
+    heroImage: '/service_rollup_standee.webp',
     mockups: [
       {
-        url: '/service_rollup_standee.png',
+        url: '/service_rollup_standee.webp',
         title: '6ft × 3ft Aluminum Rollup Standee',
         caption: 'Sleek spring-loaded retraction base with HD non-curl matte photographic banner print.'
       },
       {
-        url: '/service_posters.png',
+        url: '/service_posters.webp',
         title: 'HD Non-Curl Vinyl Media',
         caption: 'Zero glare matte lamination that prevents banner edges from curling over time.'
       }
@@ -250,10 +250,10 @@ export const serviceDetailsMap = {
     title: 'Handbills & Pamphlet Printing',
     subtitle: 'High-Volume Advertising Flyers for Mass Local Distribution',
     category: 'Direct Marketing Flyers',
-    heroImage: '/service_handbills.png',
+    heroImage: '/service_handbills.webp',
     mockups: [
       {
-        url: '/service_handbills.png',
+        url: '/service_handbills.webp',
         title: 'Mass Offset Pamphlet Printing',
         caption: 'Crisp single-color and multi-color offset handbills designed for newspaper insertion and local distribution.'
       }
@@ -300,15 +300,15 @@ export const serviceDetailsMap = {
     title: 'Visiting Cards & Business Cards',
     subtitle: 'Command Respect with Premium 300GSM Matte, Velvet & Spot UV Cards',
     category: 'Business Identity',
-    heroImage: '/service_visiting_cards.png',
+    heroImage: '/service_visiting_cards.webp',
     mockups: [
       {
-        url: '/service_visiting_cards.png',
+        url: '/service_visiting_cards.webp',
         title: 'Executive Business Card Collection',
         caption: 'High-grade 300GSM cards with matte lamination, round corners, and crisp color reproduction.'
       },
       {
-        url: '/mockups/visiting_cards_stack_1785239830901.png',
+        url: '/mockups/visiting_cards_stack_1785239830901.webp',
         title: 'Spot UV & Velvet Touch Finish',
         caption: 'Glossy raised Spot UV text on soft-touch velvet matte background for luxury brand impression.'
       }
@@ -355,10 +355,10 @@ export const serviceDetailsMap = {
     title: 'High-Resolution Posters',
     subtitle: 'Vibrant Wall Posters in A3, A2, and A1 Sizes',
     category: 'Digital Wall Prints',
-    heroImage: '/service_posters.png',
+    heroImage: '/service_posters.webp',
     mockups: [
       {
-        url: '/service_posters.png',
+        url: '/service_posters.webp',
         title: 'HD Digital Photo Poster Printing',
         caption: 'Printed on 220GSM glossy photo paper with fade-resistant pigment inks.'
       }
@@ -403,10 +403,10 @@ export const serviceDetailsMap = {
     title: 'Custom Stickers & Product Labels',
     subtitle: 'Die-Cut Waterproof Vinyl & Packaging Seal Stickers',
     category: 'Product Branding & Packaging',
-    heroImage: '/service_stickers.png',
+    heroImage: '/service_stickers.webp',
     mockups: [
       {
-        url: '/service_stickers.png',
+        url: '/service_stickers.webp',
         title: 'Die-Cut Vinyl & Paper Stickers',
         caption: 'Pre-cut kiss-cut sticker sheets and individual die-cut shapes for jar labels and box packaging.'
       }
@@ -451,10 +451,10 @@ export const serviceDetailsMap = {
     title: 'Industrial Offset Printing for Bulk',
     subtitle: 'Bill Books, Receipt Pads, Brochures, Booklets & Catalogs',
     category: 'Commercial Stationery',
-    heroImage: '/service_offset_bulk.png',
+    heroImage: '/service_offset_bulk.webp',
     mockups: [
       {
-        url: '/service_offset_bulk.png',
+        url: '/service_offset_bulk.webp',
         title: 'Bulk Offset Press & Binding Facility',
         caption: 'Heavy industrial offset printing for bill books, booklets, multi-part NCR receipts, and annual reports.'
       }
