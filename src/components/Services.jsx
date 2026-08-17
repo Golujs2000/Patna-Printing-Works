@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUpRight, Eye } from 'lucide-react';
 import { services } from '../data/siteData';
 
-export default function Services({ onSelectService, onOpenDetails }) {
+export default function Services({ onSelectService }) {
   return (
     <section id="services" className="relative w-full py-16 md:py-24 border-b border-slate-200 bg-white">
       <div className="absolute inset-0 dot-grid pointer-events-none opacity-20" />
@@ -40,9 +41,9 @@ export default function Services({ onSelectService, onOpenDetails }) {
                 </div>
 
                 {/* Service Image */}
-                <div 
-                  onClick={() => onOpenDetails && onOpenDetails(service.id)}
-                  className="w-full h-40 mb-5 overflow-hidden rounded-xl border border-slate-200 relative cursor-pointer group-hover:border-blue-500 transition-colors bg-slate-50"
+                <Link 
+                  to={`/services/${service.id}`}
+                  className="w-full h-40 mb-5 overflow-hidden rounded-xl border border-slate-200 relative block cursor-pointer group-hover:border-blue-500 transition-colors bg-slate-50"
                 >
                   <img
                     src={service.image}
@@ -54,18 +55,18 @@ export default function Services({ onSelectService, onOpenDetails }) {
                   />
                   <div className="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-20">
                     <span className="bg-white text-blue-600 font-sans font-bold text-xs uppercase px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5">
-                      <Eye className="w-3.5 h-3.5 text-blue-600" /> View Mockups
+                      <Eye className="w-3.5 h-3.5 text-blue-600" /> View Landing Page
                     </span>
                   </div>
-                </div>
+                </Link>
 
                 {/* Title & Desc */}
-                <h3 
-                  onClick={() => onOpenDetails && onOpenDetails(service.id)}
-                  className="font-sans font-bold text-lg text-slate-900 mb-2 cursor-pointer hover:text-blue-600 transition-colors text-left"
+                <Link 
+                  to={`/services/${service.id}`}
+                  className="font-sans font-bold text-lg text-slate-900 mb-2 block text-left hover:text-blue-600 transition-colors"
                 >
                   {service.title}
-                </h3>
+                </Link>
                 <p className="font-sans text-xs text-slate-600 mb-5 leading-relaxed text-left">
                   {service.description}
                 </p>
@@ -83,17 +84,17 @@ export default function Services({ onSelectService, onOpenDetails }) {
 
               {/* Card Action Buttons */}
               <div className="space-y-2 mt-auto">
-                <button
-                  onClick={() => onOpenDetails && onOpenDetails(service.id)}
+                <Link
+                  to={`/services/${service.id}`}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-sans font-bold py-2.5 px-3 rounded-xl flex justify-center items-center gap-2 shadow-md transition-all"
                 >
                   <Eye className="w-4 h-4" />
-                  <span>View Details & Mockups</span>
-                </button>
+                  <span>View Landing Page & Specs</span>
+                </Link>
 
                 <button
                   onClick={() => onSelectService(service.title)}
-                  className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-sans font-semibold py-2 px-3 rounded-xl flex justify-center items-center gap-1 border border-slate-200 transition-all"
+                  className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-sans font-semibold py-2 px-3 rounded-xl flex justify-center items-center gap-1 border border-slate-200 transition-all cursor-pointer"
                 >
                   <span>Quick Inquire</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-blue-600" />

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import Navbar from './components/Navbar';
+import TopContactBar from './components/TopContactBar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Calculator from './components/Calculator';
@@ -8,52 +10,57 @@ import Process from './components/Process';
 import InquiryForm from './components/InquiryForm';
 import AboutContact from './components/AboutContact';
 import Footer from './components/Footer';
-import ServiceDetails from './components/ServiceDetails';
+import ServiceLandingPage from './components/ServiceLandingPage';
 import { businessDetails } from './data/siteData';
 
-export default function App() {
-  const [selectedServiceId, setSelectedServiceId] = useState(null);
-  const [prefilledService, setPrefilledService] = useState('');
-  const [prefilledDetails, setPrefilledDetails] = useState('');
-
-  // Handle direct hash navigation e.g. #service-doctor-file
+// Helper component to scroll to top on route changes
+function ScrollToTop() {
+  const { pathname } = useLocation();
   useEffect(() => {
-    const handleHash = () => {
-      const hash = window.location.hash;
-      if (hash.startsWith('#service-')) {
-        const id = hash.replace('#service-', '');
-        setSelectedServiceId(id);
-      } else if (hash === '' || hash === '#') {
-        setSelectedServiceId(null);
-      }
-    };
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname]);
+  return null;
+}
 
-    handleHash();
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+// Home Page Component
+function HomePage({ prefilledService, prefilledDetails, onSelectService, onSelectEstimate }) {
+  useEffect(() => {
+    document.title = 'Patna Printing Works | Best Doctor File, Flex Banner & Printing Press in Patna';
   }, []);
 
-  const handleOpenDetails = (serviceId) => {
-    setSelectedServiceId(serviceId);
-    window.location.hash = `service-${serviceId}`;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  return (
+    <>
+      {/* Hero Section */}
+      <Hero />
 
-  const handleBackToMain = () => {
-    setSelectedServiceId(null);
-    window.location.hash = 'services';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+      {/* Services Showcase Grid */}
+      <Services onSelectService={onSelectService} />
+
+      {/* Dynamic Estimator Calculator */}
+      <Calculator onSubmitEstimate={onSelectEstimate} />
+
+      {/* Our Process */}
+      <Process />
+
+      {/* Primary Inquiry Form */}
+      <InquiryForm 
+        prefilledService={prefilledService} 
+        prefilledDetails={prefilledDetails} 
+      />
+
+      {/* Location & Map Section */}
+      <AboutContact />
+    </>
+  );
+}
+
+export default function App() {
+  const [prefilledService, setPrefilledService] = useState('');
+  const [prefilledDetails, setPrefilledDetails] = useState('');
 
   const handleSelectService = (serviceName) => {
     setPrefilledService(serviceName);
     setPrefilledDetails(`Hi! I would like to inquire about printing services for ${serviceName}.`);
-    
-    // If in details view, close it to show form
-    if (selectedServiceId) {
-      setSelectedServiceId(null);
-      window.location.hash = 'inquiry';
-    }
     
     // Scroll smoothly to Inquiry Form
     setTimeout(() => {
@@ -71,58 +78,40 @@ export default function App() {
     }, 100);
   };
 
-  const handleNavigateToCalculator = (serviceId, serviceTitle) => {
-    setSelectedServiceId(null);
-    window.location.hash = 'calculator';
-    if (serviceTitle) {
-      setPrefilledService(serviceTitle);
-    }
-    setTimeout(() => {
-      document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 font-sans flex flex-col items-center">
-      {/* Top Navigation */}
-      <Navbar onNavigateHome={() => setSelectedServiceId(null)} />
+      <ScrollToTop />
+      
+      {/* Top Navigation Header */}
+      <Navbar />
 
-      {/* Main Content Area */}
+      {/* Prominent Quick Contact Bar (Phone Number & WhatsApp) */}
+      <TopContactBar />
+
+      {/* Main Content Area with React Router */}
       <main className="w-full flex-1">
-        {selectedServiceId ? (
-          <ServiceDetails
-            serviceId={selectedServiceId}
-            onBack={handleBackToMain}
-            onNavigateToCalculator={handleNavigateToCalculator}
-            onInquireService={handleSelectService}
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              <HomePage 
+                prefilledService={prefilledService}
+                prefilledDetails={prefilledDetails}
+                onSelectService={handleSelectService}
+                onSelectEstimate={handleSelectEstimate}
+              />
+            } 
           />
-        ) : (
-          <>
-            {/* Hero Section */}
-            <Hero />
-
-            {/* Services Showcase Grid */}
-            <Services 
-              onSelectService={handleSelectService}
-              onOpenDetails={handleOpenDetails}
-            />
-
-            {/* Dynamic Estimator Calculator */}
-            <Calculator onSubmitEstimate={handleSelectEstimate} />
-
-            {/* Our Process */}
-            <Process />
-
-            {/* Primary Inquiry Form */}
-            <InquiryForm 
-              prefilledService={prefilledService} 
-              prefilledDetails={prefilledDetails} 
-            />
-
-            {/* Location & Map Section */}
-            <AboutContact />
-          </>
-        )}
+          <Route 
+            path="/services/:serviceId" 
+            element={
+              <ServiceLandingPage 
+                onSubmitEstimate={handleSelectEstimate}
+              />
+            } 
+          />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
 
       {/* Footer Section */}
@@ -142,4 +131,3 @@ export default function App() {
     </div>
   );
 }
-

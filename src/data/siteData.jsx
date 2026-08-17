@@ -81,10 +81,10 @@ export const heroContent = {
 export const services = [
   {
     id: 'doctor-file',
-    title: 'Doctor File Printing',
-    description: 'Custom doctor prescription folders, patient case file folders, and diagnostic report covers with single/double inside pockets and heavy laminated cardstock.',
+    title: 'Doctor File Printing in Patna',
+    description: 'Custom medical prescription folders, patient case file folders, and hospital report covers with single/double inner pockets printed in Bari Path, Patna.',
     accent: 'bg-retro-peach',
-    features: ['300 / 350 GSM Heavy Cardstock', 'Single & Double Inner Pocket', 'Gloss / Matte Lamination', 'Custom Branding & Patient History Fields'],
+    features: ['300 / 350 GSM Art Cardstock', 'Single & Double Inner Pockets', 'Gloss / Velvet Matte Lamination', 'PMCH / Clinic History Field Tables'],
     minOrder: '100 Folders',
     image: '/service_doctor_file.webp',
     renderIllustration: () => (
@@ -98,10 +98,10 @@ export const services = [
   },
   {
     id: 'wedding-card',
-    title: 'Invitation Card Printing',
-    description: 'Elegant custom invitation cards for weddings, birthdays & Grih Pravesh — with luxury finishes, textured stocks, golden & silver sheets, and fancy designer cards.',
+    title: 'Wedding Card Printing in Patna',
+    description: 'Luxury Shaadi Cards & invitation printing at Bari Path Patna — textured papers, metallic gold/silver foil, laser-cut gates, and printed envelopes.',
     accent: 'bg-retro-peach',
-    features: ['Textured Cardstocks', 'Golden & Silver Sheet', 'Laser Cut Designs', 'Fancy Card Invitation'],
+    features: ['500+ Bihari Shaadi Card Designs', 'Real Golden & Silver Sheet Foiling', 'Laser Cut Gates & Luxury Envelopes', 'Hindi, English & Sanskrit Printing'],
     minOrder: '50 Cards',
     image: '/service_invitation_cards.webp',
     renderIllustration: () => (
@@ -116,10 +116,10 @@ export const services = [
   },
   {
     id: 'flex-banner',
-    title: 'Flex Banner Printing',
-    description: 'Durable, vibrant, weather-resistant outdoor flex banners for shops, events, political campaigns, and birthdays.',
+    title: 'Flex Banner Printing in Patna',
+    description: 'Weatherproof outdoor flex banners, shop signboards, Star Flex, and backlit glow boards printed at Bari Path Patna with nickel eyelets.',
     accent: 'bg-retro-teal',
-    features: ['Standard & Star Flex', 'Glossy & Matte Finishes', 'Metal Eyelets / Grommets', 'High Resolution Solvent Print'],
+    features: ['Glossy & Heavy Star Flex (440GSM)', 'Rain & UV Proof Outdoor Solvent Print', 'Reinforced Edges & Metal Grommets', 'Same-Day Express Dispatch Patna'],
     minOrder: '20 Sq. Ft.',
     image: '/service_flex_banner.webp',
     renderIllustration: () => (
@@ -137,10 +137,11 @@ export const services = [
   },
   {
     id: 'rollup-standee',
-    title: 'Rollup Standee',
-    description: 'Highly portable exhibition banners mounted on premium aluminum spring-loaded rollup bases.',
+    title: 'Rollup Standee Printing in Patna',
+    subtitle: 'Portable Self-Standing Exhibition Banners',
+    description: 'Portable 6x3 ft aluminum base rollup standees for trade shows, clinics, showrooms, and coaching institutes in Patna.',
     accent: 'bg-retro-sand',
-    features: ['Premium Matte Print', 'Sturdy Aluminum Base', 'Carry Bag Included', 'Easy 1-Min Assembly'],
+    features: ['Non-Curl HD Matte Photo Media', 'Sturdy Aluminum Retractable Base', 'Padded Nylon Carry Bag Included', '1-Min Quick Assembly'],
     minOrder: '1 Standee',
     image: '/service_rollup_standee.webp',
     renderIllustration: () => (
@@ -157,10 +158,10 @@ export const services = [
   },
   {
     id: 'handbill',
-    title: 'Handbill / Flyer Printing',
-    description: 'High-speed mass advertising flyers for newspaper inserts, local distribution, and store launches.',
+    title: 'Handbill & Pamphlet Printing in Patna',
+    description: 'High-volume advertising pamphlets for newspaper insertion, store launches, and coaching center admissions across Patna & Bihar.',
     accent: 'bg-retro-mustard',
-    features: ['Maplitho & Glossy Paper', 'Single / Multi-color Offset', 'A4, A5, & A6 Standard Sizes', 'Cost-effective Bulk Packs'],
+    features: ['Maplitho & Glossy Art Paper', 'Single / Multi-Color Offset Press', 'Newspaper Insert Standard Sizes', 'Wholesale Bulk Rates Patna'],
     minOrder: '1,000 Pcs',
     image: '/service_handbills.webp',
     renderIllustration: () => (
@@ -174,10 +175,10 @@ export const services = [
   },
   {
     id: 'visiting-card',
-    title: 'Visiting Cards',
-    description: 'Premium business cards that command respect. Glossy, matte, velvet laminated, and spot UV finishes.',
+    title: 'Visiting Card Printing in Patna',
+    description: 'Premium business cards that command respect — 300GSM matte, glossy, velvet touch, rounded corners, and 3D Spot UV in Bari Path Patna.',
     accent: 'bg-retro-peach',
-    features: ['300GSM Card Stock', 'Matte/Gloss Lamination', 'Rounded Corner Cut', 'Premium Spot UV'],
+    features: ['300 / 350 GSM Imported Art Board', 'Matte, Gloss & Velvet Lamination', 'Die-Cut Round Corner Finishing', 'Executive 3D Spot UV & Gold Foil'],
     minOrder: '100 Pcs',
     image: '/service_visiting_cards.webp',
     renderIllustration: () => (
@@ -191,10 +192,10 @@ export const services = [
   },
   {
     id: 'poster',
-    title: 'Poster Printing',
-    description: 'High-definition digital posters for bedroom walls, office motivation, events, and commercial advertisements.',
+    title: 'HD Poster Printing in Patna',
+    description: 'Vibrant digital photo posters for office decor, coaching toppers, and event promotions in A3 (12x18"), A2, and A1 sizes at Bari Path Patna.',
     accent: 'bg-retro-teal',
-    features: ['12x18 inch, A3, A2, A1 Sizes', '220GSM Matte/Photo Paper', 'Fade-Resistant Pigment Ink', 'Self-Adhesive Option'],
+    features: ['220 GSM High-Gloss Photo Paper', 'Wide Format HD Pigment Ink', 'Self-Adhesive Vinyl Poster Option', 'Fast 24-Hr Turnaround Patna'],
     minOrder: '5 Pcs',
     image: '/service_posters.webp',
     renderIllustration: () => (
@@ -208,10 +209,10 @@ export const services = [
   },
   {
     id: 'sticker',
-    title: 'Stickers & Labels',
-    description: 'Custom die-cut stickers for branding, jar labeling, packaging seals, product labels, and custom shapes.',
+    title: 'Custom Sticker & Label Printing in Patna',
+    description: 'Custom die-cut waterproof vinyl stickers, product labels, food jar seals, and chrome stickers printed at Bari Path Patna.',
     accent: 'bg-retro-sand',
-    features: ['Waterproof Vinyl Option', 'Mirror Coat Chrome Stickers', 'Pre-cut Sheet Labels', 'Die-cut Custom Shapes'],
+    features: ['100% Waterproof & Tearproof Vinyl', 'Custom Die-Cut & Kiss-Cut Shapes', 'Strong Adhesive Backing Jars & Boxes', 'Clear & Metallic Mirror Chrome'],
     minOrder: '100 Pcs',
     image: '/service_stickers.webp',
     renderIllustration: () => (
@@ -226,10 +227,10 @@ export const services = [
   },
   {
     id: 'digital-offset',
-    title: 'Offset Printing for Bulk',
-    description: 'High-speed heavy-duty offset printing for bulk orders — bill books, brochures, booklets, receipt pads, and multi-page binding at wholesale prices.',
+    title: 'Bulk Offset Printing Press in Patna',
+    description: 'Industrial heavy offset printing for GST bill books, carbonless NCR receipt pads, brochures, catalogs, and booklets in Bari Path Patna.',
     accent: 'bg-retro-mustard',
-    features: ['Carbonless Bill Books', 'Brochures & Booklets', 'Receipt & Voucher Pads', 'Multi-page Binding Services', 'Handbill Printing', 'Calendar Printing'],
+    features: ['Carbonless NCR Duplicate/Triplicate', 'Sequential Numbering & Perforation', 'Multi-page Booklets & Catalogs', 'Direct Factory Wholesale Rates'],
     minOrder: '10 Books',
     image: '/service_offset_bulk.webp',
     renderIllustration: () => (

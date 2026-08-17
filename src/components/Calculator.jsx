@@ -4,8 +4,22 @@ import { calculatorConfig, businessDetails } from '../data/siteData';
 
 const SERVICE_CONFIGS = calculatorConfig.SERVICE_CONFIGS;
 
-export default function Calculator({ onSubmitEstimate }) {
-  const [selectedServiceId, setSelectedServiceId] = useState('invitation-cards');
+const SERVICE_ID_MAP = {
+  'doctor-file': 'doctor-file',
+  'wedding-card': 'invitation-cards',
+  'flex-banner': 'flex-banner',
+  'rollup-standee': 'rollup-standee',
+  'visiting-card': 'visiting-cards',
+  'handbill': 'handbills',
+  'poster': 'posters',
+  'sticker': 'stickers',
+  'digital-offset': 'offset-bulk'
+};
+
+export default function Calculator({ onSubmitEstimate, initialServiceId }) {
+  const getMappedServiceId = (id) => SERVICE_ID_MAP[id] || id || 'invitation-cards';
+
+  const [selectedServiceId, setSelectedServiceId] = useState(getMappedServiceId(initialServiceId));
   const [selectedOptionId, setSelectedOptionId] = useState('standard');
   const [quantity, setQuantity] = useState(250);
   
@@ -13,13 +27,25 @@ export default function Calculator({ onSubmitEstimate }) {
   const [width, setWidth] = useState(6);
   const [height, setHeight] = useState(4);
 
-  const currentService = SERVICE_CONFIGS[selectedServiceId];
+  // Sync if initialServiceId changes
+  useEffect(() => {
+    if (initialServiceId) {
+      const mapped = getMappedServiceId(initialServiceId);
+      if (SERVICE_CONFIGS[mapped]) {
+        setSelectedServiceId(mapped);
+      }
+    }
+  }, [initialServiceId]);
+
+  const currentService = SERVICE_CONFIGS[selectedServiceId] || SERVICE_CONFIGS['invitation-cards'];
 
   // Whenever service changes, reset options and quantity to defaults
   useEffect(() => {
-    const config = SERVICE_CONFIGS[selectedServiceId];
-    setSelectedOptionId(config.options[0].id);
-    setQuantity(config.defaultQty);
+    const config = SERVICE_CONFIGS[selectedServiceId] || SERVICE_CONFIGS['invitation-cards'];
+    if (config && config.options && config.options.length > 0) {
+      setSelectedOptionId(config.options[0].id);
+      setQuantity(config.defaultQty);
+    }
   }, [selectedServiceId]);
 
   const selectedOption = currentService.options.find(o => o.id === selectedOptionId) || currentService.options[0];

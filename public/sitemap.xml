@@ -5,62 +5,62 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://patnaprintingworks.com/</loc>
-    <lastmod>2026-07-28</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#service-doctor-file</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://patnaprintingworks.com/services/doctor-file</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#service-wedding-card</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://patnaprintingworks.com/services/wedding-card</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#service-flex-banner</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://patnaprintingworks.com/services/flex-banner</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#service-rollup-standee</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://patnaprintingworks.com/services/rollup-standee</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#service-visiting-card</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://patnaprintingworks.com/services/visiting-card</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#service-handbill</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://patnaprintingworks.com/services/handbill</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#calculator</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://patnaprintingworks.com/services/poster</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#inquiry</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://patnaprintingworks.com/services/sticker</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patnaprintingworks.com/#contact</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://patnaprintingworks.com/services/digital-offset</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

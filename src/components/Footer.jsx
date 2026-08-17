@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUp, Printer, Phone, MapPin, Heart, MessageCircle } from 'lucide-react';
 import { businessDetails, services } from '../data/siteData';
 
@@ -48,8 +49,13 @@ export default function Footer() {
             </h4>
             <ul className="font-sans text-xs space-y-2.5 text-slate-400">
               {services.map((service) => (
-                <li key={service.id} className="hover:text-white transition-colors cursor-pointer">
-                  • {service.title}
+                <li key={service.id}>
+                  <Link 
+                    to={`/services/${service.id}`}
+                    className="hover:text-blue-400 transition-colors inline-block py-0.5"
+                  >
+                    • {service.title}
+                  </Link>
                 </li>
               ))}
             </ul>

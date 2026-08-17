@@ -37,6 +37,24 @@
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
+
+  /* Enforce pointer cursor on all clickable and interactive elements across the site */
+  a, 
+  button, 
+  select, 
+  option,
+  input[type="button"], 
+  input[type="submit"], 
+  input[type="reset"], 
+  input[type="checkbox"],
+  input[type="radio"],
+  summary, 
+  label,
+  [role="button"],
+  [tabindex],
+  .cursor-pointer {
+    cursor: pointer !important;
+  }
 }
 
 /* Modern Clean Utility Classes */
