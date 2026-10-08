@@ -107,12 +107,26 @@ export default function Footer() {
         </div>
 
         {/* Bottom Row */}
-        <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left text-xs font-sans text-slate-500">
+        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-xs font-sans text-slate-500">
           <div>
             © {new Date().getFullYear()} Patna Printing Works. All rights reserved.
           </div>
-          <div className="flex items-center gap-1">
-            Crafted with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> for businesses in Patna & Bihar.
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex items-center gap-1 text-slate-400">
+              <span>Design by</span>
+              <a 
+                href="https://nirviai.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-400 hover:text-blue-300 font-semibold underline underline-offset-4 transition-colors"
+              >
+                nirviai.com
+              </a>
+            </div>
+            <span className="text-slate-700 hidden sm:inline">•</span>
+            <div className="flex items-center gap-1">
+              Crafted with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> for businesses in Patna & Bihar.
+            </div>
           </div>
         </div>
 
