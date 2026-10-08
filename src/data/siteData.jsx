@@ -136,10 +136,10 @@ export const services = [
     )
   },
   {
-    id: 'rollup-standee',
-    title: 'Rollup Standee Printing in Patna',
-    subtitle: 'Portable Self-Standing Exhibition Banners',
-    description: 'Portable 6x3 ft aluminum base rollup standees for trade shows, clinics, showrooms, and coaching institutes in Patna.',
+    id: 'standee',
+    title: 'Standee Printing in Patna',
+    subtitle: 'Portable Self-Standing Exhibition Rollup Banners',
+    description: 'Portable 6x3 ft aluminum base rollup standees and promotional cutouts for trade shows, clinics, showrooms, and coaching institutes in Patna.',
     accent: 'bg-retro-sand',
     features: ['Non-Curl HD Matte Photo Media', 'Sturdy Aluminum Retractable Base', 'Padded Nylon Carry Bag Included', '1-Min Quick Assembly'],
     minOrder: '1 Standee',
@@ -157,19 +157,85 @@ export const services = [
     )
   },
   {
-    id: 'handbill',
-    title: 'Handbill & Pamphlet Printing in Patna',
-    description: 'High-volume advertising pamphlets for newspaper insertion, store launches, and coaching center admissions across Patna & Bihar.',
+    id: 'pamphlet-printing',
+    title: 'Pamphlet Printing in Patna',
+    description: 'High-volume advertising pamphlets and flyers for newspaper insertion, store launches, and coaching center admissions across Patna & Bihar.',
     accent: 'bg-retro-mustard',
     features: ['Maplitho & Glossy Art Paper', 'Single / Multi-Color Offset Press', 'Newspaper Insert Standard Sizes', 'Wholesale Bulk Rates Patna'],
     minOrder: '1,000 Pcs',
-    image: '/service_handbills.webp',
+    image: '/service_pamphlet.webp',
     renderIllustration: () => (
       <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-mustard" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M25 15h35l12 12v50H25z" fill="#EADFC9" />
         <path d="M15 25h35l12 12v50H15z" />
         <path d="M23 45h20M23 55h28M23 65h12" />
         <path d="M52 48l2-4 4 1-1-4 3-2-4-1 1-4-4 2-2-3-1 4-4-1 2 4-3 2 4 1-1 4z" fill="#D35230" />
+      </svg>
+    )
+  },
+  {
+    id: 'brochure-printing',
+    title: 'Brochure Printing in Patna',
+    description: 'Premium bi-fold and tri-fold corporate brochures, company profile booklets, and product catalogs with gloss/matte lamination in Bari Path, Patna.',
+    accent: 'bg-retro-peach',
+    features: ['Bi-Fold & Tri-Fold Design Formats', '170 / 250 / 300 GSM Imported Art Paper', 'Velvet Matte & Gloss Thermal Finish', 'Precision Creasing & High-Speed Press'],
+    minOrder: '100 Pcs',
+    image: '/service_brochure.webp',
+    renderIllustration: () => (
+      <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-peach" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 20h22v60H15z" />
+        <path d="M39 20h22v60H39z" fill="#FAF7F2" />
+        <path d="M63 20h22v60H63z" />
+        <path d="M20 32h12M20 42h10M44 32h12M44 42h10M68 32h12M68 42h10" />
+      </svg>
+    )
+  },
+  {
+    id: 'welcome-board',
+    title: 'Welcome Board Printing in Patna',
+    description: 'Stunning wedding, birthday, engagement & corporate event welcome boards on 3mm/5mm rigid sunboard with wooden easel stands in Patna.',
+    accent: 'bg-retro-sand',
+    features: ['Rigid 3mm & 5mm Waterproof Sunboard', 'Includes Sturdy Wooden Tripod Easel Stand', 'HD Vinyl Print with Matte Finish', 'Custom Royal Wedding & Event Themes'],
+    minOrder: '1 Board',
+    image: '/service_welcome_board.webp',
+    renderIllustration: () => (
+      <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-sand" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M30 88L46 22M70 88L54 22M50 16v12M32 72h36" strokeWidth="3" />
+        <rect x="25" y="28" width="50" height="38" rx="2" fill="#FAF7F2" />
+        <path d="M35 44h30M38 52h24" strokeWidth="2" />
+      </svg>
+    )
+  },
+  {
+    id: 'promo-table',
+    title: 'Promo Table Printing in Patna',
+    description: 'Portable collapsible promotional demonstration tables with custom branded header boards and wrap-around graphics for retail expos in Patna.',
+    accent: 'bg-retro-teal',
+    features: ['Lightweight Collapsible Body', 'Overhead Brand Header & Wrap Graphic', 'Internal Storage Shelf & Carry Bag', 'Fast 2-Minute Tool-Free Setup'],
+    minOrder: '1 Table',
+    image: '/service_promo_table.webp',
+    renderIllustration: () => (
+      <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-teal" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="22" y="16" width="56" height="18" rx="2" fill="#FAF7F2" />
+        <path d="M30 34v16M70 34v16" strokeWidth="2.5" />
+        <rect x="18" y="50" width="64" height="38" rx="2" />
+        <path d="M18 64h64" strokeDasharray="3 3" />
+      </svg>
+    )
+  },
+  {
+    id: 'canopy-printing',
+    title: 'Canopy Printing in Patna',
+    description: 'Heavy-duty outdoor promotional advertising canopy tents and gazebo booths with full custom branding prints for roadshows & events across Bihar.',
+    accent: 'bg-retro-mustard',
+    features: ['Heavy-Duty MS Powder-Coated Metal Frame', 'Waterproof & UV-Proof Tetron Fabric', '6x6 ft, 8x8 ft & 10x10 ft Standard Sizes', 'Complete Kit with Travel Carry Bag'],
+    minOrder: '1 Canopy',
+    image: '/service_canopy.webp',
+    renderIllustration: () => (
+      <svg viewBox="0 0 100 100" className="w-24 h-24 text-retro-charcoal stroke-current fill-retro-mustard" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 42L50 18L85 42z" fill="#FAF7F2" />
+        <path d="M15 42h70v10H15z" />
+        <path d="M22 52v36M78 52v36" strokeWidth="3" />
       </svg>
     )
   },
@@ -289,15 +355,76 @@ export const calculatorConfig = {
       qtyLabel: 'Banners'
     },
     'rollup-standee': {
-      name: 'Rollup Standee (6ft × 3ft)',
+      name: 'Standee Printing (6ft × 3ft)',
       options: [
         { id: 'standard-rollup', name: 'Standard Matte Print (6×3 ft)', price: 1200 },
-        { id: 'premium-rollup', name: 'Premium Matte Print (6×3 ft)', price: 1500 }
+        { id: 'premium-rollup', name: 'Premium Non-Curl Film (6×3 ft)', price: 1500 }
       ],
       minQty: 1,
       maxQty: 50,
       defaultQty: 1,
       qtyLabel: 'Standees'
+    },
+    'pamphlets': {
+      name: 'Pamphlet Printing in Patna',
+      options: [
+        { id: 'single-color', name: 'Single-Color Maplitho (Eco)', price: 0.6 },
+        { id: 'multi-80gsm', name: 'Multicolor 80GSM Art Paper', price: 1.2 },
+        { id: 'glossy-130gsm', name: 'Heavy-duty 130GSM Glossy', price: 2.0 }
+      ],
+      minQty: 1000,
+      maxQty: 20000,
+      defaultQty: 2000,
+      qtyLabel: 'Pamphlets'
+    },
+    'brochures': {
+      name: 'Brochure Printing in Patna',
+      options: [
+        { id: 'bifold-170gsm', name: 'Bi-Fold 170GSM Art Paper', price: 8 },
+        { id: 'trifold-250gsm', name: 'Tri-Fold 250GSM Premium Art', price: 12 },
+        { id: 'laminated-300gsm', name: '300GSM Matte Laminated Brochure', price: 18 }
+      ],
+      minQty: 100,
+      maxQty: 5000,
+      defaultQty: 250,
+      qtyLabel: 'Brochures'
+    },
+    'welcome-board': {
+      name: 'Welcome Board Printing (incl. Wooden Stand)',
+      options: [
+        { id: 'board-18x24', name: '18" × 24" Sunboard + Wooden Easel Stand', price: 1400 },
+        { id: 'board-24x36', name: '24" × 36" Sunboard + Wooden Easel Stand', price: 1800 },
+        { id: 'board-only-24x36', name: '24" × 36" Board Only (No Stand)', price: 1100 },
+        { id: 'board-grand-24x48', name: '24" × 48" Grand Wedding Board + Stand', price: 2400 }
+      ],
+      minQty: 1,
+      maxQty: 20,
+      defaultQty: 1,
+      qtyLabel: 'Boards'
+    },
+    'promo-table': {
+      name: 'Promo Table Printing in Patna',
+      options: [
+        { id: 'standard-pvc-table', name: 'Standard PVC Promo Table (Header + Bag)', price: 2800 },
+        { id: 'deluxe-counter', name: 'Deluxe Aluminum Frame Demo Counter', price: 3600 }
+      ],
+      minQty: 1,
+      maxQty: 50,
+      defaultQty: 1,
+      qtyLabel: 'Tables'
+    },
+    'canopy-printing': {
+      name: 'Canopy Printing in Patna',
+      options: [
+        { id: 'canopy-6x6-roof', name: '6×6 ft Standard Canopy (Roof Branding + Bag)', price: 3500 },
+        { id: 'canopy-6x6-backdrop', name: '6×6 ft Canopy with Back Wall Graphic', price: 4500 },
+        { id: 'canopy-8x8', name: '8×8 ft Heavy Duty Gazebo Tent', price: 5200 },
+        { id: 'canopy-10x10', name: '10×10 ft Mega Exhibition Canopy', price: 6800 }
+      ],
+      minQty: 1,
+      maxQty: 25,
+      defaultQty: 1,
+      qtyLabel: 'Canopies'
     },
     'visiting-cards': {
       name: 'Visiting / Business Cards',
@@ -310,18 +437,6 @@ export const calculatorConfig = {
       maxQty: 5000,
       defaultQty: 500,
       qtyLabel: 'Cards'
-    },
-    'handbills': {
-      name: 'Handbills & Pamphlets',
-      options: [
-        { id: 'single-color', name: 'Single-Color Maplitho (Eco)', price: 0.6 },
-        { id: 'multi-80gsm', name: 'Multicolor 80GSM Art Paper', price: 1.2 },
-        { id: 'glossy-130gsm', name: 'Heavy-duty 130GSM Glossy', price: 2.0 }
-      ],
-      minQty: 1000,
-      maxQty: 10000,
-      defaultQty: 2000,
-      qtyLabel: 'Sheets'
     },
     'posters': {
       name: 'High-Resolution Posters',
@@ -395,11 +510,15 @@ export const processSteps = [
 ];
 
 export const servicesListSimple = [
+  'Brochure Printing in Patna',
+  'Pamphlet Printing in Patna',
+  'Welcome Board Printing in Patna',
+  'Standee Printing in Patna',
+  'Promo Table Printing in Patna',
+  'Canopy Printing in Patna',
   'Doctor File / Prescription Folder',
   'Wedding Card Printing',
   'Flex Banner Printing',
-  'Rollup Standee',
-  'Handbill / Flyer Printing',
   'Visiting Cards',
   'Poster Printing',
   'Stickers & Labels',

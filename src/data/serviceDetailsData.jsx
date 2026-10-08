@@ -191,9 +191,9 @@ export const serviceDetailsMap = {
     ]
   },
 
-  'rollup-standee': {
-    id: 'rollup-standee',
-    title: 'Rollup Standee Banner Printing in Patna',
+  'standee': {
+    id: 'standee',
+    title: 'Standee Printing in Patna',
     subtitle: 'Best Portable Exhibition Display Standee Shop at Bari Path, Patna',
     category: 'Exhibition & Display Standees Patna',
     heroImage: '/service_rollup_standee.webp',
@@ -209,7 +209,7 @@ export const serviceDetailsMap = {
         caption: 'Zero glare matte lamination that prevents banner edges from curling over time.'
       }
     ],
-    summary: 'Promote your brand at trade fairs, doctor clinics, showroom entrances, conferences, and coaching centers with portable Rollup Standees from Patna Printing Works. Built with an ultra-lightweight aluminum retracting base, high-definition non-curling vinyl graphics, and a padded carry bag, setup takes under 60 seconds.',
+    summary: 'Promote your brand at trade fairs, doctor clinics, showroom entrances, conferences, and coaching centers with portable Standees from Patna Printing Works. Built with an ultra-lightweight aluminum retracting base, high-definition non-curling vinyl graphics, and a padded carry bag, setup takes under 60 seconds.',
     highlights: [
       'Standard 6ft × 3ft and 6ft × 2.5ft Standees in Patna',
       'Heavy-Duty Aluminum Retractable Spring Base Mechanism',
@@ -244,32 +244,72 @@ export const serviceDetailsMap = {
       }
     ]
   },
-
-  'handbill': {
-    id: 'handbill',
-    title: 'Handbill & Pamphlet Printing in Patna',
-    subtitle: 'High-Volume Offset Flyer & Newspaper Insert Printing Press in Bari Path, Patna',
-    category: 'Direct Marketing Flyers Patna',
-    heroImage: '/service_handbills.webp',
+  'rollup-standee': {
+    id: 'standee',
+    title: 'Standee Printing in Patna',
+    subtitle: 'Best Portable Exhibition Display Standee Shop at Bari Path, Patna',
+    category: 'Exhibition & Display Standees Patna',
+    heroImage: '/service_rollup_standee.webp',
     mockups: [
       {
-        url: '/service_handbills.webp',
+        url: '/service_rollup_standee.webp',
+        title: '6ft × 3ft Aluminum Rollup Standee Patna',
+        caption: 'Sleek spring-loaded retraction base with HD non-curl matte photographic banner print produced in Patna.'
+      }
+    ],
+    summary: 'Promote your brand at trade fairs, doctor clinics, showroom entrances, conferences, and coaching centers with portable Standees from Patna Printing Works.',
+    highlights: [
+      'Standard 6ft × 3ft and 6ft × 2.5ft Standees in Patna',
+      'Heavy-Duty Aluminum Retractable Spring Base Mechanism',
+      'Waterproof & Non-Curl Matte Photo Banner Graphic',
+      'Includes Nylon Travel Carry Bag'
+    ],
+    specs: {
+      gsm: '220 Micron Non-Curl Polypropylene / Matte Vinyl',
+      paperTypes: ['Non-Curl Polypropylene Banner', 'Velvet Matte Vinyl Film'],
+      finishes: ['Anti-Glare Matte Lamination', 'Aluminum Spring Retract Base'],
+      standardSizes: ['6ft × 3ft (Standard)', '6ft × 2.5ft (Compact)'],
+      turnaround: '24 Hours in Patna',
+      minQuantity: '1 Standee',
+      printTech: 'High Resolution Eco-Solvent / Latex HD'
+    },
+    priceTiers: [
+      { qty: '1 Standee', rate: '₹1,200 / unit', estTotal: '₹1,200', notes: 'Complete Standee Unit + Bag' }
+    ],
+    applications: ['Exhibition Booths Patna', 'Doctor Clinic Receptions', 'Showroom Entrances'],
+    faqs: [
+      {
+        q: 'What is the price of a rollup standee in Patna?',
+        a: 'At Patna Printing Works, a complete 6ft × 3ft Rollup Standee costs just ₹1,200.'
+      }
+    ]
+  },
+
+  'pamphlet-printing': {
+    id: 'pamphlet-printing',
+    title: 'Pamphlet Printing in Patna',
+    subtitle: 'High-Volume Wholesale Offset Flyer & Newspaper Insert Printing Press in Bari Path, Patna',
+    category: 'Direct Marketing Flyers Patna',
+    heroImage: '/service_pamphlet.webp',
+    mockups: [
+      {
+        url: '/service_pamphlet.webp',
         title: 'Mass Offset Pamphlet Printing Patna',
         caption: 'Crisp single-color and multi-color offset handbills designed for newspaper insertion and local distribution across Patna.'
       }
     ],
-    summary: 'Reach thousands of prospective customers across Patna, Muzaffarpur, Gaya, and Bihar with cost-effective Handbills and Pamphlets from Patna Printing Works. Ideal for coaching institute admission campaigns, retail shop launches, medical awareness camps, and festival sales, we offer high-speed offset printing at wholesale rates.',
+    summary: 'Supercharge your business sales with high-volume Pamphlet Printing in Patna from Patna Printing Works. Situated at Bari Path, Dariyapur, we are Bihar\'s trusted mass flyer printing press for coaching centers, retail showrooms, hospitals, restaurants, and real estate launches. Choose from economical 54 GSM Maplitho for newspaper inserts to heavy 130 GSM glossy art paper at direct factory rates starting under 40 paise per flyer.',
     highlights: [
-      'Best Pamphlet & Handbill Printing Press in Patna',
-      'Single Color (Eco Maplitho) & 4-Color Art Paper Offset',
-      'Newspaper Insertion Compatible Sizes (A4, A5, 1/8 Demy)',
-      'Wholesale Rates Starting at Under 40 Paise Per Sheet'
+      'Wholesale Pamphlet Printing in Patna Under 40 Paise Per Sheet',
+      'Eco Maplitho Paper & Glossy Imported Art Paper Options',
+      'Newspaper Insertion Ready Sizes (A5, 1/8 Demy, A4)',
+      'Express 24-48 Hour Turnaround with Bihar-Wide Dispatch'
     ],
     specs: {
       gsm: '54 GSM Maplitho to 130 GSM Glossy Art Paper',
-      paperTypes: ['Maplitho Paper (Newspaper Insert)', '70 GSM White Bond Paper', '100 GSM Glossy Art Paper', '130 GSM Premium Gloss'],
-      finishes: ['Precision Guillotine Cut', 'Center Folding / Tri-fold Creasing'],
-      standardSizes: ['A5 Size (5.5" × 8.5")', 'A4 Size (8.5" × 11")', 'A6 Handbill (4.25" × 5.5")'],
+      paperTypes: ['54 GSM Maplitho Paper (Newspaper Insert)', '70 GSM Premium White Bond', '80 GSM Art Paper', '130 GSM Ultra Gloss'],
+      finishes: ['Precision Guillotine Cut', 'Center Folding / Tri-fold Creasing', 'Vendor Bundle Strapping'],
+      standardSizes: ['A5 Size (5.5" × 8.5")', '1/8 Demy (5.5" × 8.5")', 'A4 Size (8.5" × 11")', 'A6 Handbill (4.25" × 5.5")'],
       turnaround: '24 to 48 Hours in Patna',
       minQuantity: '1,000 Sheets',
       printTech: 'High-Speed Web & Sheetfed Offset Presses'
@@ -277,7 +317,7 @@ export const serviceDetailsMap = {
     priceTiers: [
       { qty: '1,000 Sheets', rate: '₹0.90 / sheet', estTotal: '₹900', notes: 'Single Color Maplitho A5' },
       { qty: '2,000 Sheets', rate: '₹0.60 / sheet', estTotal: '₹1,200', notes: '★ Popular Patna Local Campaign' },
-      { qty: '5,000 Sheets', rate: '₹0.45 / sheet', estTotal: '₹2,250', notes: 'Mass Distribution Rate' },
+      { qty: '5,000 Sheets', rate: '₹0.45 / sheet', estTotal: '₹2,250', notes: 'Multicolor 80GSM Art Paper Rate' },
       { qty: '10,000 Sheets', rate: '₹0.38 / sheet', estTotal: '₹3,800', notes: 'Wholesale Newspaper Insert Patna' }
     ],
     applications: [
@@ -289,10 +329,339 @@ export const serviceDetailsMap = {
     ],
     faqs: [
       {
-        q: 'Which print shop in Patna offers cheap handbill printing for coaching centers?',
-        a: 'Patna Printing Works at Bari Path, Dariyapur Gola offers wholesale offset handbill printing starting under 40 paise per sheet.'
+        q: 'Which print shop in Patna offers cheap pamphlet printing for coaching centers?',
+        a: 'Patna Printing Works at Bari Path, Dariyapur Gola offers wholesale offset pamphlet printing starting under 40 paise per sheet.'
+      },
+      {
+        q: 'Do you bundle pamphlets for newspaper hawkers in Patna?',
+        a: 'Yes, we neatly bundle and strap pamphlets in counts of 500 or 1,000 sheets for easy distribution by Patna newspaper vendors.'
       }
     ]
+  },
+  'handbill': {
+    id: 'pamphlet-printing',
+    title: 'Pamphlet Printing in Patna',
+    subtitle: 'High-Volume Offset Flyer & Newspaper Insert Printing Press in Bari Path, Patna',
+    category: 'Direct Marketing Flyers Patna',
+    heroImage: '/service_pamphlet.webp',
+    mockups: [
+      {
+        url: '/service_pamphlet.webp',
+        title: 'Mass Offset Pamphlet Printing Patna',
+        caption: 'Crisp single-color and multi-color offset handbills designed for newspaper insertion.'
+      }
+    ],
+    summary: 'Reach thousands of prospective customers across Patna with cost-effective Handbills and Pamphlets from Patna Printing Works.',
+    highlights: ['Best Pamphlet Printing Press in Patna', 'Wholesale Rates Starting Under 40 Paise'],
+    specs: {
+      gsm: '54 GSM Maplitho to 130 GSM Glossy Art Paper',
+      paperTypes: ['Maplitho Paper', 'Glossy Art Paper'],
+      finishes: ['Precision Guillotine Cut'],
+      standardSizes: ['A5 Size', 'A4 Size'],
+      turnaround: '24 to 48 Hours in Patna',
+      minQuantity: '1,000 Sheets',
+      printTech: 'High-Speed Offset Press'
+    },
+    priceTiers: [
+      { qty: '1,000 Sheets', rate: '₹0.90 / sheet', estTotal: '₹900', notes: 'Single Color Maplitho A5' }
+    ],
+    applications: ['Coaching Institute Campaigns', 'Retail Offers'],
+    faqs: [
+      {
+        q: 'What is the rate of pamphlet printing in Patna?',
+        a: 'Rates start as low as 38 paise per flyer for bulk offset printing.'
+      }
+    ]
+  },
+
+  'brochure-printing': {
+    id: 'brochure-printing',
+    title: 'Brochure Printing in Patna',
+    subtitle: 'Best Corporate Bi-Fold, Tri-Fold & Product Catalog Printing Press in Bari Path, Patna',
+    category: 'Corporate Stationery & Marketing Collateral Patna',
+    heroImage: '/service_brochure.webp',
+    mockups: [
+      {
+        url: '/service_brochure.webp',
+        title: 'Premium Tri-Fold & Bi-Fold Brochure Showcase Patna',
+        caption: 'Corporate brochures printed on 250GSM imported glossy art paper with velvet matte lamination and precision score folding.'
+      },
+      {
+        url: '/mockups/visiting_cards_stack_1785239830901.webp',
+        title: 'Spot UV & Metallic Foil Finishes',
+        caption: 'Raised Spot UV gloss accents on company logo and product headings for an elite executive look.'
+      }
+    ],
+    summary: 'Patna Printing Works delivers high-definition Brochure Printing in Patna for corporate businesses, real estate developers, coaching institutes, hospitals, jewelry showrooms, and industrial manufacturers. Located at Bari Path, Dariyapur, we offer multi-panel bi-fold, tri-fold, z-fold, gate-fold brochures, and saddle-stitched product catalogs. Produced on imported 170 GSM, 250 GSM, and 300 GSM Art Cardstock with protective gloss or velvet matte thermal lamination.',
+    highlights: [
+      'High-Speed Digital & Sheetfed Offset Brochure Printing in Patna',
+      'Bi-Fold (4 Panels), Tri-Fold (6 Panels) & Multi-Page Booklets',
+      'Gloss / Velvet Matte Thermal Lamination with Crisp Creasing',
+      'Factory Wholesale Rates with Free Patna Delivery & Sample Proofing'
+    ],
+    specs: {
+      gsm: '170 GSM to 300 GSM Heavy Imported Art Paper & Board',
+      paperTypes: ['170 GSM Gloss Art Paper (Standard)', '250 GSM Premium Card Stock', '300 GSM Heavy Cover Board', 'Textured Linen & Pearl Shimmer'],
+      finishes: ['Thermal Matte Lamination', 'Gloss Thermal Finish', 'Precision Machine Scoring / Creasing', 'Spot UV Embossing', 'Gold Foil Accents'],
+      standardSizes: ['A4 Bi-Fold (Opened: 8.27" × 11.69", Folded: 5.8" × 8.27")', 'A4 Tri-Fold (6 Panels: 3.9" × 8.27" each)', 'A3 Folded to A4 (Opened: 11.69" × 16.53")', 'Square 8" × 8" Luxury Booklet'],
+      turnaround: '24 to 48 Hours Express in Patna',
+      minQuantity: '100 Brochures',
+      printTech: 'Production Digital Press (2400 DPI) & 4-Color Heidelberg Offset Press'
+    },
+    priceTiers: [
+      { qty: '100 Brochures', rate: '₹12 / pc', estTotal: '₹1,200', notes: 'Bi-fold 170GSM Glossy Art Paper' },
+      { qty: '250 Brochures', rate: '₹9 / pc', estTotal: '₹2,250', notes: '★ Popular Corporate Tri-Fold Pack' },
+      { qty: '500 Brochures', rate: '₹7.5 / pc', estTotal: '₹3,750', notes: 'Laminated 250GSM Premium Stock' },
+      { qty: '1,000 Brochures', rate: '₹5.5 / pc', estTotal: '₹5,500', notes: 'Factory Wholesale Offset Rate Patna' }
+    ],
+    applications: [
+      'Real Estate Township & Flat Floor Plan Brochures Patna',
+      'Hospitals, Clinics & Diagnostic Test Menu Folders',
+      'Coaching Institutes & School Admission Prospectus Patna',
+      'Jewelry, Hotel & Automobile Product Catalogs',
+      'Corporate Company Profile & Annual Business Overviews'
+    ],
+    faqs: [
+      {
+        q: 'Where can I get high quality brochure printing in Patna near Bari Path?',
+        a: 'Patna Printing Works at Bari Path, beside Card Mahal, Dariyapur Gola is Patna\'s top destination for bi-fold and tri-fold corporate brochure printing.'
+      },
+      {
+        q: 'What is the standard size and paper GSM for company brochures in Patna?',
+        a: 'The most popular format is an A4 sheet folded into a Tri-Fold (6 panels) or Bi-Fold (4 panels) on 170 GSM or 250 GSM gloss art paper with matte lamination.'
+      },
+      {
+        q: 'Can you help with brochure design layout and formatting?',
+        a: 'Yes! Our in-house graphic design specialists assist in page planning, typography, product photo placement, and sending digital PDF proofs before printing.'
+      }
+    ]
+  },
+  'brochure': {
+    id: 'brochure-printing',
+    title: 'Brochure Printing in Patna',
+    subtitle: 'Best Corporate Bi-Fold, Tri-Fold & Product Catalog Printing Press in Bari Path, Patna',
+    category: 'Corporate Stationery Patna',
+    heroImage: '/service_brochure.webp',
+    mockups: [{ url: '/service_brochure.webp', title: 'Brochure Showcase', caption: 'High-definition brochure print.' }],
+    summary: 'Patna Printing Works delivers high-definition Brochure Printing in Patna for corporate businesses and institutes.',
+    highlights: ['High-Speed Digital & Offset Printing', 'Bi-Fold & Tri-Fold Formats'],
+    specs: {
+      gsm: '170 GSM to 300 GSM Art Paper',
+      paperTypes: ['170 GSM Gloss', '250 GSM Card', '300 GSM Board'],
+      finishes: ['Matte / Gloss Lamination'],
+      standardSizes: ['A4 Bi-Fold', 'A4 Tri-Fold'],
+      turnaround: '24 to 48 Hours in Patna',
+      minQuantity: '100 Brochures',
+      printTech: 'Digital & Offset Press'
+    },
+    priceTiers: [{ qty: '100 Brochures', rate: '₹12 / pc', estTotal: '₹1,200', notes: 'Bi-fold 170GSM' }],
+    applications: ['Corporate Catalogs', 'Real Estate Brochures'],
+    faqs: [{ q: 'Do you print corporate brochures in Patna?', a: 'Yes, Patna Printing Works prints premium corporate brochures.' }]
+  },
+
+  'welcome-board': {
+    id: 'welcome-board',
+    title: 'Welcome Board Printing in Patna',
+    subtitle: 'Elegant Wedding, Engagement, Birthday & Event Welcome Board with Wooden Easel Stand in Patna',
+    category: 'Wedding & Event Entrance Signage Patna',
+    heroImage: '/service_welcome_board.webp',
+    mockups: [
+      {
+        url: '/service_welcome_board.webp',
+        title: 'Royal Wedding Welcome Board on Wooden Easel Stand',
+        caption: 'Luxury gold calligraphy on rigid matte sunboard with floral arrangement frame, displayed at event entrance.'
+      },
+      {
+        url: '/service_invitation_cards.webp',
+        title: 'Customized Monogram & Ceremony Dates',
+        caption: 'Tailored typography for Tilak, Sangeet, Shaadi, Reception, and 1st Birthday parties.'
+      }
+    ],
+    summary: 'Give your guests a royal reception with custom Welcome Board Printing in Patna by Patna Printing Works. Crafted on high-rigidity 3mm or 5mm waterproof Sunboard / Foam Board and paired with an adjustable folding wooden tripod easel stand, our welcome boards create a memorable entrance for weddings, sangeet nights, ring ceremonies, birthdays, and corporate galas. Featuring rich matte or glossy vinyl lamination with gold calligraphy, floral borders, and custom couple monograms.',
+    highlights: [
+      'Rigid 3mm & 5mm Waterproof Foam / Sunboard Substrate',
+      'Includes Premium Sturdy Wooden Tripod Easel Stand',
+      'HD Vinyl Photographic Print with Anti-Glare Matte Lamination',
+      'Royal Wedding, Sangeet, Tilak & Birthday Designer Templates'
+    ],
+    specs: {
+      gsm: '3mm & 5mm Rigid PVC Sunboard (Foam Board)',
+      paperTypes: ['3mm High-Density Rigid Sunboard', '5mm Heavy Sunboard', 'Clear Acrylic 3mm Board Option'],
+      finishes: ['Zero-Glare Velvet Matte Lamination', 'Gloss Lamination', 'Metallic Gold / Rose Gold Vinyl Lettering'],
+      standardSizes: ['18" × 24" Standard Event Size', '24" × 36" Royal Wedding Size (Most Popular)', '24" × 48" Grand Entrance Board'],
+      turnaround: 'Same Day to 24 Hours in Patna',
+      minQuantity: '1 Board (Complete with Wooden Stand)',
+      printTech: 'High-Resolution Wide Format UV / Eco-Solvent Digital Press'
+    },
+    priceTiers: [
+      { qty: '18" × 24" Board + Stand', rate: '₹1,400 / set', estTotal: '₹1,400', notes: 'Compact Party / Birthday Entrance' },
+      { qty: '24" × 36" Board + Stand', rate: '₹1,800 / set', estTotal: '₹1,800', notes: '★ Most Popular Wedding Size in Patna' },
+      { qty: '24" × 36" Board Only', rate: '₹1,100 / board', estTotal: '₹1,100', notes: 'Sunboard Only (Easel Stand Not Included)' },
+      { qty: '24" × 48" Grand Board + Stand', rate: '₹2,400 / set', estTotal: '₹2,400', notes: 'Grand Hotel / Lawn Entrance' }
+    ],
+    applications: [
+      'Wedding & Reception Entrance Welcome Signboards Patna',
+      'Tilak, Sangeet & Haldi Celebration Boards',
+      '1st Birthday & Baby Shower Entrance Decor',
+      'Grih Pravesh (Housewarming) & Anniversaries',
+      'Corporate Annual Meets & Conference Agendas'
+    ],
+    faqs: [
+      {
+        q: 'Does the welcome board include the wooden easel stand?',
+        a: 'Yes! Our complete welcome board package includes both the high-definition printed rigid sunboard and the sturdy folding wooden tripod stand.'
+      },
+      {
+        q: 'How quickly can I get a wedding welcome board printed in Patna?',
+        a: 'We offer express 24-hour turnaround at Bari Path, Patna. Same-day emergency printing is also available on request!'
+      },
+      {
+        q: 'Can I provide my own design or do you design it?',
+        a: 'Both! You can send us your ready artwork or our designers will customize a template with couple names, event dates, and hashtags for your approval on WhatsApp.'
+      }
+    ]
+  },
+
+  'promo-table': {
+    id: 'promo-table',
+    title: 'Promo Table Printing in Patna',
+    subtitle: 'Portable Promotional Demonstration Counter & Folding Demo Table Press in Bari Path, Patna',
+    category: 'Exhibition Counters & Retail Display Patna',
+    heroImage: '/service_promo_table.webp',
+    mockups: [
+      {
+        url: '/service_promo_table.webp',
+        title: 'Folding Promotional Demo Counter with Header Board Patna',
+        caption: 'Lightweight collapsible PVC promotion table featuring full-color wrap graphic, overhead branding banner, and internal storage shelf.'
+      }
+    ],
+    summary: 'Showcase your products and engage prospective customers with custom Promo Table Printing in Patna from Patna Printing Works. Ideal for mall activations, supermarket tasting kiosks, outdoor sampling, college campus roadshows, and trade fair booths across Bihar. Our portable promo tables feature a collapsible PVC or aluminum structure, overhead branded header board, wrap-around high-definition graphics with anti-scratch lamination, internal storage shelf, and a durable carry bag for effortless transport.',
+    highlights: [
+      'Complete Promotional Pop-Up Counter with Overhead Header Board',
+      'High-Impact Full Wrap-Around Graphic with Scratch-Proof Matte Lamination',
+      'Internal Storage Shelf for Product Samples & Pamphlet Storage',
+      'Tool-Free 2-Minute Quick Assembly with Padded Carry Bag'
+    ],
+    specs: {
+      gsm: 'High-Density Molded PVC Body & 440GSM Laminated Vinyl Media',
+      paperTypes: ['Heavy-Duty Collapsible PVC', 'Deluxe Aluminum Frame Demo Counter', 'MDF Reinforced Countertop'],
+      finishes: ['Scratch-Resistant Matte Lamination', 'Overhead Twin Pole Support', 'Internal Commodity Shelf'],
+      standardSizes: ['Table Top: 32" W × 16" D × 32" H', 'Header Board: 31" W × 11" H', 'Total Display Height: ~80 inches'],
+      turnaround: '24 to 48 Hours Express in Patna',
+      minQuantity: '1 Table (Complete Kit + Carry Bag)',
+      printTech: 'HD Eco-Solvent / Latex Vinyl Digital Press'
+    },
+    priceTiers: [
+      { qty: '1 Unit Complete Set', rate: '₹2,800 / unit', estTotal: '₹2,800', notes: 'PVC Promo Table + Overhead Header + Carry Bag' },
+      { qty: '2 - 4 Units Campaign Pack', rate: '₹2,600 / unit', estTotal: '₹5,200 - ₹10,400', notes: '★ Popular Patna Retail Activation Pack' },
+      { qty: '5+ Units Corporate Bulk', rate: '₹2,400 / unit', estTotal: '₹12,000+', notes: 'Wholesale FMCG & Brand Campaign Rate' }
+    ],
+    applications: [
+      'Supermarket & Mall Product Sampling Counters Patna',
+      'Trade Show & Exhibition Information Booths',
+      'Coaching Institute Inquiry & Registration Stalls',
+      'Food & Beverage Tasting Pop-Up Counters',
+      'Automobile & Banking Promotional Drives Bihar'
+    ],
+    faqs: [
+      {
+        q: 'What comes included with the promo table printing in Patna?',
+        a: 'You receive the complete setup: the collapsible counter body, MDF countertop, internal storage shelf, overhead support poles, top header board, custom high-definition printed graphics with matte lamination, and a nylon carrying case.'
+      },
+      {
+        q: 'How much weight can the promo table countertop support?',
+        a: 'The sturdy countertop comfortably supports up to 15-20 kg of product samples, brochures, and demo equipment.'
+      },
+      {
+        q: 'Is the graphic wrap reusable or replaceable?',
+        a: 'Yes! The graphic wrap is mounted securely and can easily be replaced with new branding for your future marketing campaigns.'
+      }
+    ]
+  },
+
+  'canopy-printing': {
+    id: 'canopy-printing',
+    title: 'Canopy Printing in Patna',
+    subtitle: 'Heavy-Duty Outdoor Promotional Advertising Canopy Tent & Gazebo Press in Bari Path, Patna',
+    category: 'Outdoor Promotional Tents & Gazebos Patna',
+    heroImage: '/service_canopy.webp',
+    mockups: [
+      {
+        url: '/service_canopy.webp',
+        title: '6x6 ft Branded Promotional Marketing Canopy Patna',
+        caption: 'Weatherproof tetron canopy tent with custom printed 4-side valance, pyramid roof branding, and rear promotional backdrop wall.'
+      },
+      {
+        url: '/service_promo_table.webp',
+        title: 'Integrated Canopy & Promo Table Setup',
+        caption: 'Complete roadshow kit combining custom canopy booth with promotional demo table.'
+      }
+    ],
+    summary: 'Maximize outdoor brand visibility across Patna and Bihar with heavy-duty Canopy Printing in Patna by Patna Printing Works. Engineered for extreme weather, roadshows, election campaigns, rural marketing drives, and event registration booths. Our promotional canopy tents are constructed with robust powder-coated steel collapsible frames and 100% waterproof, UV-proof Tetron / PVC fabrics with crisp digital printing on all four roof valances, top canopy, and backdrop walls. Packs down into a compact carry bag in under 3 minutes.',
+    highlights: [
+      'Available in 6×6 ft, 8×8 ft, and 10×10 ft Standard Dimensions',
+      'Heavy-Duty Rust-Proof Powder-Coated Metal Folding Scissors Frame',
+      'Waterproof, UV-Resistant & Tear-Proof Heavy Tetron Fabric',
+      'Includes Complete Carry Bag & High-Strength Anchor Pegs'
+    ],
+    specs: {
+      gsm: 'Heavy-Duty Powder-Coated MS Pipe & 300GSM Waterproof Tetron Fabric',
+      paperTypes: ['Heavy-Duty Iron Scissor Frame', 'Commercial Hexagonal Aluminum Frame', 'Waterproof Tetron Fabric', 'Heavy PVC Flex Top'],
+      finishes: ['Double Stitch Reinforced Seams', 'Velcro Attachment Straps', 'Tear-Proof Valance Borders'],
+      standardSizes: ['6ft × 6ft × 7ft Height (Standard Compact)', '8ft × 8ft × 7.5ft Height (Commercial)', '10ft × 10ft × 8ft Height (Mega Gazebo)'],
+      turnaround: '24 to 48 Hours in Patna',
+      minQuantity: '1 Canopy Tent',
+      printTech: 'Direct Digital Textile Solvent & Dye-Sublimation Press'
+    },
+    priceTiers: [
+      { qty: '6×6 ft Standard Canopy', rate: '₹3,500 / unit', estTotal: '₹3,500', notes: 'Roof Branding (4 Valances + 4 Slopes) + Heavy Frame + Bag' },
+      { qty: '6×6 ft Canopy + Back Wall', rate: '₹4,500 / unit', estTotal: '₹4,500', notes: '★ Popular Roadshow Setup (Roof + Full Back Wall)' },
+      { qty: '8×8 ft Heavy-Duty Canopy', rate: '₹5,200 / unit', estTotal: '₹5,200', notes: 'Commercial Size for Outdoor Showrooms' },
+      { qty: '10×10 ft Mega Gazebo', rate: '₹6,800 / unit', estTotal: '₹6,800', notes: 'Large Trade Fair & Auto Expo Canopy' }
+    ],
+    applications: [
+      'Automobile, Two-Wheeler & Tractor Roadshows Bihar',
+      'Telecom, Banking & Loan Customer Registration Camps',
+      'Coaching Institute Admission Camps at School Gates',
+      'FMCG Rural Marketing & Village Haat Stalls',
+      'Political Election Campaign Booths Patna'
+    ],
+    faqs: [
+      {
+        q: 'Is the promotional canopy tent waterproof and rain-resistant?',
+        a: 'Yes! We use premium heavy-duty waterproof Tetron fabric with sealed stitching, making it 100% rainproof and sunlight UV-resistant for outdoor use across Bihar.'
+      },
+      {
+        q: 'How long does it take to set up the pop-up canopy tent?',
+        a: 'Thanks to the folding scissor mechanism, two people can easily pull and expand the canopy tent in less than 3 minutes without requiring any tools.'
+      },
+      {
+        q: 'Do you provide delivery for canopies across Bihar and Jharkhand?',
+        a: 'Yes! We ship promotional canopies across Patna, Gaya, Muzaffarpur, Bhagalpur, Darbhanga, Ranchi, Jamshedpur, and all districts of Bihar and Jharkhand.'
+      }
+    ]
+  },
+  'canopy': {
+    id: 'canopy-printing',
+    title: 'Canopy Printing in Patna',
+    subtitle: 'Heavy-Duty Outdoor Promotional Advertising Canopy Tent in Bari Path, Patna',
+    category: 'Outdoor Tents Patna',
+    heroImage: '/service_canopy.webp',
+    mockups: [{ url: '/service_canopy.webp', title: 'Canopy Showcase', caption: 'Custom printed canopy.' }],
+    summary: 'Outdoor promotional advertising canopy tents with custom branding for events and marketing.',
+    highlights: ['Heavy-Duty Metal Frame', 'Waterproof Tetron Fabric'],
+    specs: {
+      gsm: 'Heavy-Duty MS Pipe & 300GSM Tetron',
+      paperTypes: ['Heavy-Duty Frame', 'Waterproof Tetron'],
+      finishes: ['Reinforced Seams'],
+      standardSizes: ['6×6 ft', '8×8 ft', '10×10 ft'],
+      turnaround: '24 to 48 Hours',
+      minQuantity: '1 Canopy',
+      printTech: 'Digital Solvent Press'
+    },
+    priceTiers: [{ qty: '6×6 ft Canopy', rate: '₹3,500 / unit', estTotal: '₹3,500', notes: 'Roof Branding + Bag' }],
+    applications: ['Outdoor Roadshows', 'Promotional Camps'],
+    faqs: [{ q: 'Is the canopy waterproof?', a: 'Yes, 100% waterproof Tetron fabric.' }]
   },
 
   'visiting-card': {
